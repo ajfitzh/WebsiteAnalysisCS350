@@ -1,4 +1,4 @@
-package edu.odu.cs350
+package edu.odu.cs.cs350;
 
 public class TestWhoAmI
 {
