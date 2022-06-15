@@ -1,3 +1,11 @@
+# Gradle Rules
+.gradle
+
+# Eclipse rule
+.project
+.classpath
+.settings
+
 # Taken from Kennedy's Youtube Lecture "2018 Summer CS350 Setting Up a Gradle Java Project in a Git Repo"
 build
 # ** is any class file within directory AND project
@@ -11,3 +19,4 @@ build
 
 # Python
 **.pyc
+/bin/
