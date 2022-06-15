@@ -1,0 +1,13 @@
+# Taken from Kennedy's Youtube Lecture "2018 Summer CS350 Setting Up a Gradle Java Project in a Git Repo"
+build
+# ** is any class file within directory AND project
+**.class
+
+
+# For sake of completeness, probably won't be used here
+
+#C++
+**.o
+
+# Python
+**.pyc
