@@ -5,10 +5,14 @@ package edu.odu.cs.cs350;
 
 public class App {
     public String getGreeting() {
-        return "Hello World!";
+        return "Hello World! This is the beginning of CS350 Group 5's Software Project!";
     }
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        //Test creation of Website Class
+        Website test = new Website();
+        //Test call of Output Packager triggering all output functions
+        OutputPackager.CallOutput();
     }
 }
