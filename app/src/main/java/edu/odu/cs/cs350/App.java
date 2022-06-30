@@ -3,16 +3,64 @@
  */
 package edu.odu.cs.cs350;
 
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.InvalidPathException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 public class App {
-    public String getGreeting() {
-        return "Hello World! This is the beginning of CS350 Group 5's Software Project!";
-    }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        //Error Handling
+    	int check = 0;
+    	do {
+    		if(args[0] == null) {
+    			System.out.println("No Argument Provided- Please provide a valid directory!");
+    			System.exit(1);
+    		}
+    		if(!isValidPath(args[0])) {
+    		System.out.println("Not a valid path. Please try again with a valid filepath.");
+    		System.exit(1);}
+//    		if(isDirEmpty(args[0])) {
+//    			System.out.println("Directory is empty!");
+//    		}
+    		check=1;
+    	} while(check==0);
+    	
+    	System.out.println(new App().getGreeting());
         //Test creation of Website Class
-        Website test = new Website();
+        Website website = new Website();
+        //Take in Argument Directory
+        website.PrepareDirectory(args);
+        website.HTMLExtractor("C:\\Users\\austi\\Desktop\\WebsiteAnalysisCS350\\BasicSite\\index.html");
+        
         //Test call of Output Packager triggering all output functions
         OutputPackager.CallOutput();
     }
-}
+
+    
+    public static boolean isValidPath(String path) {
+        try {
+            Paths.get(path);
+        } catch (InvalidPathException | NullPointerException ex) {
+            return false;
+        }
+        return true;
+    }
+    public String getGreeting() {
+    	String greeting = "        ________     ________\n"
+    			+ "  . - ~|        |-^-|        |~ - .\n"
+    			+ "{      |  CS350 |   | Group5 |      }\n"
+    			+ "        `.____.'     `.____.' \n"
+    			+ "--------------------------------------\n"
+    			+ "WEBSITE ANALYZER v1.0";
+        return greeting;
+    }
+    private static boolean isDirEmpty(final Path directory) throws IOException {
+        try(DirectoryStream<Path> dirStream = Files.newDirectoryStream(directory)) {
+            return !dirStream.iterator().hasNext();
+        }
+    }
+    }

@@ -33,10 +33,6 @@ dependencies {
     
     //for identifying file types
 	implementation 'org.apache.tika:tika-parsers:1.28.4'
-	
-	//For parsing HTML files
-	// jsoup HTML parser library @ https://jsoup.org/
-implementation 'org.jsoup:jsoup:1.15.1'
 }
 
 application {

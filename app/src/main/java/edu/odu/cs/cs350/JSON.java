@@ -1,5 +1,9 @@
 package edu.odu.cs.cs350;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+
 public class JSON {
 	//This JSON is called by OutputPackager, it should call for the information it needs from Website/Pages/Other and
 	//NEEDS: For page entry, # of local images, external images, JS scripts, CSS stylesheets, intra-page, intra-site,and external links
@@ -10,6 +14,13 @@ public class JSON {
 	String filename;
 	
 	public static void Output() {
+		try {
+			BufferedWriter writer = new BufferedWriter(new FileWriter("YYYMMDD-hhmmss-summary.json"));
+			writer.write("Writing text to my json");
+			writer.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		System.out.println("Outputting .json file!");
 	}
 }
