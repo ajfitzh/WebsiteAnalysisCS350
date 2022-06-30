@@ -13,7 +13,7 @@ public class JSON {
 	//string for filename, must have the format YYYMMDD-hhmmss-summary.json
 	String filename;
 	
-	public static void Output() {
+	public static void output() {
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter("YYYMMDD-hhmmss-summary.json"));
 			writer.write("Writing text to my json");

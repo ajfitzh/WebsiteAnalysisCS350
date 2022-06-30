@@ -1,5 +1,7 @@
 package edu.odu.cs.cs350;
 
+import java.util.Collection;
+
 public class Image {
 	//unique integer ID
 	int id;
@@ -8,7 +10,7 @@ public class Image {
 	//file size of the image in kb
 	int fileSize;
 	//URI locator
-	String URI;
+	String uri;
 	//Array to hold unique ID of pages where this is referenced
-	int[] references;
+	Collection<Page> references;
 }

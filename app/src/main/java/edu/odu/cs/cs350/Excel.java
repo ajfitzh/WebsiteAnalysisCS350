@@ -18,7 +18,7 @@ public class Excel {
 	//string for filename, must have format YYYMMDD-hhmmss-summary.xlsx
 	String filename;
 	//output function for .xlsx file
-	public static void Output() {
+	public static void output() {
 //		XSSFWorkbook workbook = new XSSFWorkbook();
 		try(HSSFWorkbook workbook = new HSSFWorkbook()) {
 			HSSFSheet firstSheet = workbook.createSheet("summary");

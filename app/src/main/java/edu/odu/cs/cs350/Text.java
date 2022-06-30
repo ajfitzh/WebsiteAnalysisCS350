@@ -15,7 +15,7 @@ public class Text {
 	//string for filename, must have format YYYMMDD-hhmmss-summary.txt
 	String filename;
 	//output function for .txt file
-	public static void Output() {
+	public static void output() {
 		try {
 			BufferedWriter writer = new BufferedWriter(new FileWriter("YYYMMDD-hhmmss-summary.txt"));
 			writer.write("Writing text to my file");

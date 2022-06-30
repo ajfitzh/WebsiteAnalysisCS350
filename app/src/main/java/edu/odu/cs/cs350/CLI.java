@@ -5,7 +5,7 @@ public class CLI {
 	// in order to output to the CLI
 	//NEEDS: filenames of excel, text, and json files
 	
-	public static void Output() {
+	public static void output() {
 		System.out.println("Outputting CLI stuff!");
 	}
 }

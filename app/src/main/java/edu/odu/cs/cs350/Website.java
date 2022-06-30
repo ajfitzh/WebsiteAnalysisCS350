@@ -1,5 +1,6 @@
 package edu.odu.cs.cs350;
 
+import java.util.Collection;
 import java.util.LinkedList;
 
 import java.io.File;
@@ -31,7 +32,7 @@ public class Website {
 	int uncategorized = 0;
 	
 	//LinkedList (or array?) for storing web Pages created by HTMLExtractor/Translator
-	LinkedList<Page> pages = new LinkedList<Page>();
+	Collection<Page> pages;
 	
 	// totalSize might store size in MB, might take this out
 	int totalSize;
@@ -39,6 +40,8 @@ public class Website {
 	//name of the website
 	String name;
 	
+	//collection of pathnames called "BaseURLs"
+	Collection<String> baseURLs;
 	//listFolder function
 	void listFolder(File dir) {
 		File[] subDirs = dir.listFiles(new FileFilter() {

@@ -6,10 +6,10 @@ public class OutputPackager {
 	//and output .JAR file with completed code and 2 executables (Windows and Linux/OSX)
 	//Also possibly outputs errors to CLI if not caused by user (if caused by user, that output is handled by Website class
 	
-	public static void CallOutput() {
-		JSON.Output();
-		Text.Output();
-		Excel.Output();
-		CLI.Output();
+	public static void callOutput() {
+		JSON.output();
+		Text.output();
+		Excel.output();
+		CLI.output();
 	}
 }

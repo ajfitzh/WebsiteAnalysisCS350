@@ -33,11 +33,11 @@ public class App {
         //Test creation of Website Class
         Website website = new Website();
         //Take in Argument Directory
-        website.PrepareDirectory(args);
-        website.HTMLExtractor("C:\\Users\\austi\\Desktop\\WebsiteAnalysisCS350\\BasicSite\\index.html");
+        website.prepareDirectory(args);
+        website.htmlExtractor("C:\\Users\\austi\\Desktop\\WebsiteAnalysisCS350\\BasicSite\\index.html");
         
         //Test call of Output Packager triggering all output functions
-        OutputPackager.CallOutput();
+        OutputPackager.callOutput();
     }
 
     

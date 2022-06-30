@@ -8,7 +8,7 @@ public class OtherFile {
 		//2 for Video File
 		//3 for Audio File
 		//4 for Uncategorized File
-		int fileType;
+		enum fileType {Archive, Video, Audio, Uncategorized};
 		//string to hold name of the file
 		String name;
 		//integer to hold size of the file in kb
