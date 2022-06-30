@@ -64,7 +64,7 @@ public class Website {
 			}
 	
 	//The "starter" function that reads the user argument, input, and reports user errors and requests new entry
-	public void PrepareDirectory(String[] args) {
+	public void prepareDirectory(String[] args) {
 		System.out.println("Preparing Directory...");
 		System.out.println("Name of argument passed in:"+args[0]);
 
@@ -81,7 +81,7 @@ private void listFile(File dir) {
     	try {
 			System.out.println("File Type:" + Files.probeContentType(file.toPath()));
 			if(Files.probeContentType(file.toPath()) != null) {
-				Sort(Files.probeContentType(file.toPath()));
+				sort(Files.probeContentType(file.toPath()));
 				//find size of file
 				long length = Files.size(file.toPath());
 				System.out.println("Size " + length + " bytes");
@@ -93,7 +93,7 @@ private void listFile(File dir) {
 	}
 }
 	//Sorting function for analyzed files
-	public void Sort(String file) {
+	public void sort(String file) {
 		switch(file) {
 		case "text/html":
 				System.out.println("HTML file found and added");
@@ -140,7 +140,7 @@ private void listFile(File dir) {
 	//HTML Extractor extracts anchor tags/links and classifies links as intra-page, intra-site, or external
 	//Extracts Image tags and classifies as internal/external images
 	//Extracts file size for each image, the URI for each image, and local pages on which it is referenced
-	public void HTMLExtractor(String htmlfile) {
+	public void htmlExtractor(String htmlfile) {
 		int intrapageLinks = 0;
 		int intersiteLinks = 0;
 		int externalLinks = 0;
