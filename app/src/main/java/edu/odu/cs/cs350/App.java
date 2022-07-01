@@ -3,45 +3,85 @@
  */
 package edu.odu.cs.cs350;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.InvalidPathException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.Arrays;
 
 public class App {
 
     public static void main(String[] args) {
-        //Error Handling
     	int check = 0;
     	do {
-    		if(args[0] == null) {
-    			System.out.println("No Argument Provided- Please provide a valid directory!");
-    			System.exit(1);
-    		}
-    		if(!isValidPath(args[0])) {
-    		System.out.println("Not a valid path. Please try again with a valid filepath.");
-    		System.exit(1);}
-//    		if(isDirEmpty(args[0])) {
-//    			System.out.println("Directory is empty!");
-//    		}
+    		
+    		String dirName = args[0];
+    		//Check if Argument is provided
+    		if(isArgumentProvided(args)==0) {
+    			System.exit(0);
+    		};
+    		
+    		//Check for errors in input name
+    		checkIfDirectoryEmptyOrInvalid(dirName);
+
     		check=1;
     	} while(check==0);
     	
     	System.out.println(new App().getGreeting());
         //Test creation of Website Class
-        Website website = new Website();
+//        Website website = new Website();
         //Take in Argument Directory
-        website.prepareDirectory(args);
-        website.htmlExtractor("C:\\Users\\austi\\Desktop\\WebsiteAnalysisCS350\\BasicSite\\index.html");
+//        website.prepareDirectory(args);
+//        website.htmlExtractor("C:\\Users\\austi\\Desktop\\WebsiteAnalysisCS350\\BasicSite\\index.html");
         
         //Test call of Output Packager triggering all output functions
         OutputPackager.callOutput();
     }
 
     
-    public static boolean isValidPath(String path) {
+    static int isArgumentProvided(String[] args) {
+    	if(args.length == 0) {
+			System.out.println("No Argument Provided- Please provide a valid directory!");
+			return 0;
+		}
+		return 1;
+		
+	}
+
+
+	static int checkIfDirectoryEmptyOrInvalid(String dirName) {
+    	File file = new File(dirName);
+    	Path path = Paths.get(dirName);
+    	
+		//Check if it is a valid path to a file or directory0
+		if(!isValidPath(dirName)) {
+		System.out.println("Not a valid path. Please try again with a valid filepath. (Remember to remove the backslash at the end of the directory!)");
+		return 0;
+		}
+		//Check if directory is empty or just a file
+		try {
+			if (Files.isDirectory(path)) {
+		        if (!Files.list(path).findAny().isPresent()) {
+		            System.out.println("Directory is empty! Please submit a valid directory file.");
+		            return 0;
+		        }
+		    } else {
+		        System.out.println("Not a directory! Please submit a valid directory file.");
+		        return 0;
+		    }
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return 1;
+		
+	}
+
+
+	public static boolean isValidPath(String path) {
         try {
             Paths.get(path);
         } catch (InvalidPathException | NullPointerException ex) {
@@ -49,6 +89,7 @@ public class App {
         }
         return true;
     }
+    
     public String getGreeting() {
     	String greeting = "        ________     ________\n"
     			+ "  . - ~|        |-^-|        |~ - .\n"
@@ -58,9 +99,6 @@ public class App {
     			+ "WEBSITE ANALYZER v1.0";
         return greeting;
     }
-    private static boolean isDirEmpty(final Path directory) throws IOException {
-        try(DirectoryStream<Path> dirStream = Files.newDirectoryStream(directory)) {
-            return !dirStream.iterator().hasNext();
-        }
-    }
+    
+
     }

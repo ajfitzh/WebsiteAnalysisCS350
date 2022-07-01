@@ -11,4 +11,17 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+    @Test public void appRefusesInvalidDirectoryPath() {
+    	assertEquals("app should return error if invalid directory path", 0, App.checkIfDirectoryEmptyOrInvalid("C:/underoath"));
+    }
+    @Test public void appRefusesEmptyDirectory() {
+    	assertEquals("app should return error if empty folder", 0, App.checkIfDirectoryEmptyOrInvalid("/app/src/test/resources/BasicSite/emptyDirectory"));
+    }
+    @Test public void appRefusesFile() {
+    	assertEquals("app should return error if just a file", 0, App.checkIfDirectoryEmptyOrInvalid("/app/src/test/resources/BasicSite/aboutme.html"));
+    }
+    @Test public void appRefusesNoArgument() {
+    	String[] args = new String[0];
+    	assertEquals("app should return error if just a file", 0, App.isArgumentProvided(args));
+    }
 }
