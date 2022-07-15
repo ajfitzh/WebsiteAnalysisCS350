@@ -9,9 +9,17 @@ public class Page {
 	//unique ID number
 	int id;
 	//file size in KB
-	int fileSize;
+	long fileSize;
 	//local pathname within website
 	String path;
+    Page(String name, int id, long fileSize, String path){
+        this.name =  name;
+        this.id = id;
+        this.fileSize = fileSize;
+        this.path =  path;
+        System.out.println("-Page created-");
+
+    }
 	//array holding unique ID's of all CSS scripts referenced by this page
 	Collection<CSS> css;
 	//array holding unique ID's of all Javascript scripts referenced by this page

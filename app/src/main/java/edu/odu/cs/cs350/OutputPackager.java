@@ -7,9 +7,9 @@ public class OutputPackager {
 	//Also possibly outputs errors to CLI if not caused by user (if caused by user, that output is handled by Website class
 	
 	public static void callOutput() {
-		JSON.output();
-		Text.output();
-		Excel.output();
-		CLI.output();
+		//Run JSON, Text, and Excel output. Their return values are their file names,
+		// so pass these into CLI output to output it to the scren.
+		CLI.output(JSON.output(),Text.output(),Excel.output());
+
 	}
 }

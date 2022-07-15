@@ -1,16 +1,11 @@
 package edu.odu.cs.cs350;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.LinkedList;
-
+import java.util.Iterator;
 import java.io.File;
 import java.io.FileFilter;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Files;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -22,17 +17,21 @@ import org.jsoup.select.Elements;
 
 public class Website {
 	//placeholders to temporarily count files
-	int html = 0;
-	int css = 0;
-	int js = 0;
-	int images = 0;
-	int archives = 0;
-	int audio = 0;
-	int videos = 0;
-	int uncategorized = 0;
+	int htmlCounter = 1;
+	int cssCounter = 1;
+	int jsCounter = 1;
+	int imageryCounter = 1;
+	int archivesCounter = 1;
+	int audioCounter = 1;
+	int videosCounter = 1;
+	int uncategorizedCounter = 1;
 	
-	//LinkedList (or array?) for storing web Pages created by HTMLExtractor/Translator
-	Collection<Page> pages;
+	//ArrayList for storing items (Pages and other items) created by HTMLExtractor/Translator
+	Collection<Page> pages = new ArrayList<Page>();
+	Collection<Image> images = new ArrayList<Image>();
+	Collection<CSS> csssheets = new ArrayList<CSS>();
+	Collection<OtherFile> otherFiles = new ArrayList<OtherFile>();
+	Collection<JavaScript> javascripts = new ArrayList<JavaScript>();
 	
 	// totalSize might store size in MB, might take this out
 	int totalSize;
@@ -42,49 +41,27 @@ public class Website {
 	
 	//collection of pathnames called "BaseURLs"
 	Collection<String> baseURLs;
-	//listFolder function
-	void listFolder(File dir) {
-		File[] subDirs = dir.listFiles(new FileFilter() {
-			
-			
-			@Override
-			public boolean accept(File pathname) {
-				return pathname.isDirectory();
-			}
-			});
-			
-			System.out.println("\nDirectory of " + dir.getAbsolutePath());
-			listFile(dir);
-			
-			for(File folder: subDirs) {
-				listFolder(folder);
-			}
-			System.out.println("HTML: " + html + " CSS:" + css + " JS:" + js + " Images:" + images + " Archives:" + archives + " Audio:" + audio
-					+ " Videos: " + videos + " Uncategorized:" + uncategorized);
-			}
-	
+
 	//The "starter" function that reads the user argument, input, and reports user errors and requests new entry
 	public void prepareDirectory(String[] args) {
-		System.out.println("Preparing Directory...");
-		System.out.println("Name of argument passed in:"+args[0]);
-
 		
-	new Website().listFolder(new File(args[0]));
-
-
+		System.out.println("Preparing Directory:"+args[0]);
+		
+		new Website().listFolder(new File(args[0]), pages, images, csssheets, otherFiles);
+	}
 	
-}
-private void listFile(File dir) {
+private void listFile(File dir, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles) {
 	File[] files = dir.listFiles();
 	for (File file: files) {
 		System.out.println(file.getName());
     	try {
 			System.out.println("File Type:" + Files.probeContentType(file.toPath()));
 			if(Files.probeContentType(file.toPath()) != null) {
-				sort(Files.probeContentType(file.toPath()));
 				//find size of file
-				long length = Files.size(file.toPath());
-				System.out.println("Size " + length + " bytes");
+				long tempFileSize = Files.size(file.toPath());
+				//Main sorting function for files
+				sort(Files.probeContentType(file.toPath()), file, pages, images, csssheets, otherFiles, tempFileSize);
+				System.out.println("Size " + tempFileSize + " bytes");
 			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -93,42 +70,57 @@ private void listFile(File dir) {
 	}
 }
 	//Sorting function for analyzed files
-	public void sort(String file) {
+	public void sort(String file, File fileobject, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles, long tempFileSize) {
+		String name = fileobject.getName();
 		switch(file) {
 		case "text/html":
 				System.out.println("HTML file found and added");
-				html++;
+				
+				System.out.println(name);
+				pages.add(new Page(name, htmlCounter,tempFileSize,"hi"));
+				htmlCounter++;
 				break;
 		case "text/css":
-				System.out.println("CSS file found and added");
-				css++;
+				System.out.println("CSS file found and added");				
+				System.out.println(name);
+				csssheets.add(new CSS(name, cssCounter,1, tempFileSize,"testURI"));
+				cssCounter++;
 				break;
 		case "image/png":
 				System.out.println("Image(PNG) file found and added");
-				images++;
+				images.add(new Image(name, imageryCounter, 1, tempFileSize, "testURI"));
+				imageryCounter++;
 				break;
 		case "image/jpeg":
 				System.out.println("Image(JPG) file found and added");
-				images++;
+				images.add(new Image(name, imageryCounter, 1, tempFileSize, "testURI"));
+				imageryCounter++;
+				break;
 		case "text/plain":
 				System.out.println("Text/Plain read as JS file found and added");
-				js++;
+				javascripts.add(new JavaScript(name, jsCounter,1, tempFileSize,"testURI"));
+				jsCounter++;
+				break;
 		case "application/x-zip-compressed":
 				System.out.println("Zip(Archive) file file found and added");
-				archives++;
+				otherFiles.add(new OtherFile(name, archivesCounter, "Zip", tempFileSize, "testPath"));
+				archivesCounter++;
 				break;
 		case "video/quicktime":
 		case "video/mp4":
 				System.out.println("Video(.mov/.mp4) file found and added");
-				videos++;
+				otherFiles.add(new OtherFile(name, archivesCounter, "mov", tempFileSize, "testPath"));
+				videosCounter++;
 				break;
 		case "application/pdf":
 				System.out.println("PDF file set as Uncategorized file found and added");
-				uncategorized++;
+				otherFiles.add(new OtherFile(name, archivesCounter, "PDF", tempFileSize, "testPath"));
+				uncategorizedCounter++;
 				break;
 		case "audio/mpeg":
 				System.out.println("Audio file found and added");
-				audio++;
+				otherFiles.add(new OtherFile(name, archivesCounter, "Audio", tempFileSize, "testPath"));
+				audioCounter++;
 				break;
 	}
 	
@@ -181,8 +173,60 @@ private void listFile(File dir) {
 			System.out.println("--End of JSoup Analysis--");
 	}
 	
+	//listFolder function
+	void listFolder(File dir, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles) {
+		File[] subDirs = dir.listFiles(new FileFilter() {
+			
+			
+			@Override
+			public boolean accept(File pathname) {
+				return pathname.isDirectory();
+			}
+			});
+			
+			System.out.println("\nDirectory of " + dir.getAbsolutePath());
+			listFile(dir, pages, images, csssheets, otherFiles);
+			
+			for(File folder: subDirs) {
+				listFolder(folder, pages, images, csssheets, otherFiles);
+			}
+			System.out.println("HTML: " + htmlCounter + " CSS:" + cssCounter + " JS:" + jsCounter + " Images:" + imageryCounter +
+					" Archives:" + archivesCounter + " Audio:" + audioCounter
+					+ " Videos: " + videosCounter + " Uncategorized:" + uncategorizedCounter);
+			}
+	
+	
 	//Create output packager to allow Website to call the Output function
 	OutputPackager Output = new OutputPackager();
+
+	public void listAllNodes() {
+
+		System.out.println("---------Pages in Site");
+		for (Page page: pages) {
+            System.out.println(page.id + ". " + page.name + " | size: " + page.fileSize);
+        }
+		System.out.println("---------Images in Site");
+		for (Image image: images) {
+            System.out.println(image.id + ". " + image.name + " | size: " + image.fileSize);
+        }
+		System.out.println("---------CSS Sheets in Site");
+		for (CSS sheet: csssheets) {
+            System.out.println(sheet.id + ". " + sheet.name + " | size: " + sheet.fileSize);
+        }
+		System.out.println("---------JavaScript Files in Site");
+		for (JavaScript script: javascripts) {
+            System.out.println(script.id + ".  Name: " + script.name + " | size: " + script.fileSize);
+        }
+		System.out.println("---------Other Files in Site");
+		for (OtherFile otherFile: otherFiles) {
+            System.out.println(otherFile.id + ". " + otherFile.typetest + " Name: " + otherFile.name + " | size: " + otherFile.fileSize);
+        }
+
+//		Collection<Image> images;
+//		Collection<CSS> csssheets;
+//		Collection<OtherFile> otherFiles;
+		
+	}
 	
 	
 }

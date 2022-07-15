@@ -3,6 +3,9 @@ package edu.odu.cs.cs350;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class JSON {
 	//This JSON is called by OutputPackager, it should call for the information it needs from Website/Pages/Other and
@@ -11,16 +14,26 @@ public class JSON {
 	//NEEDS: For archive/video/audio/uncat entries, need file size and local path to resource
 	
 	//string for filename, must have the format YYYMMDD-hhmmss-summary.json
-	String filename;
+
 	
-	public static void output() {
-		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter("YYYMMDD-hhmmss-summary.json"));
-			writer.write("Writing text to my json");
-			writer.close();
-		} catch (IOException e) {
-			e.printStackTrace();
+	public static String output() {
+			//Find date
+		//*******************************************CAPITAL M is MONTH, lowercase m is minute! Doublecheck ...
+		    Format f = new SimpleDateFormat("MMddyyyy-hhmmss");
+		    String date = f.format(new Date());
+		    String fileName = date+"-summary.json";
+		    //Write JSON file
+			BufferedWriter writer;
+			try {
+				writer = new BufferedWriter(new FileWriter(fileName));
+				writer.write("Writing text to my json");
+				writer.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		
+		return fileName;
 		}
-		System.out.println("Outputting .json file!");
-	}
 }

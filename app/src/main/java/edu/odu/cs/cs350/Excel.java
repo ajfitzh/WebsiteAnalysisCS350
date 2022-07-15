@@ -3,12 +3,18 @@ package edu.odu.cs.cs350;
 //Importing required classes
 import java.io.FileOutputStream;
 import java.io.IOException;
+
 import java.util.Map;
 import java.util.TreeMap;
 import java.time.format.DateTimeFormatter;
 import java.time.LocalDateTime;
 
 import org.apache.poi.hssf.usermodel.*;
+
+import java.text.Format;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 
 
 public class Excel {
@@ -20,10 +26,14 @@ public class Excel {
 	//string for filename, must have format YYYMMDD-hhmmss-summary.xlsx
 	String filename;
 	//output function for .xlsx file
-	public static void output() {
+	public static String output() {
+	    Format f = new SimpleDateFormat("MMddyyyy-hhmmss");
+	    String date = f.format(new Date());
+	    String fileName = date + "-summary.xls";
 //		XSSFWorkbook workbook = new XSSFWorkbook();
 		try(HSSFWorkbook workbook = new HSSFWorkbook()) {
 			HSSFSheet firstSheet = workbook.createSheet("summary");
+
 			
 			//HSSFRow rowA = firstSheet.createRow(0);
 			//HSSFCell cellA = rowA.createCell(0);
@@ -38,7 +48,13 @@ public class Excel {
 				new Object[] {"Page", "#Images", "#CSS", "Scripts", "#Links (Intra-Page)", "#Links (Internal)", "#Links (External)"});
 
 			try(FileOutputStream fos = new FileOutputStream(getFileName())) {
-				workbook.write(fos);
+
+			HSSFRow rowA = firstSheet.createRow(0);
+			HSSFCell cellA = rowA.createCell(0);
+			cellA.setCellValue(new HSSFRichTextString("Website Analysis"));
+			try(FileOutputStream fos1 = new FileOutputStream(fileName)) {
+
+				workbook.write(fos1);
 				workbook.close();
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -46,7 +62,12 @@ public class Excel {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		System.out.println("Outputting .xlsx file!");
+		return fileName;
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+	return fileName;
 	}
 
 	// Generate filename for .xlsx file

@@ -1,2 +1,0 @@
-Writing to a friggin' file.
- Here is another friggin' line.

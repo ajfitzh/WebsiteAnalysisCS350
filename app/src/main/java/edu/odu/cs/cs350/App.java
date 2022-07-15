@@ -31,12 +31,13 @@ public class App {
     	} while(check==0);
     	
     	System.out.println(new App().getGreeting());
-        //Test creation of Website Class
-//        Website website = new Website();
-        //Take in Argument Directory
-//        website.prepareDirectory(args);
-//        website.htmlExtractor("C:\\Users\\austi\\Desktop\\WebsiteAnalysisCS350\\BasicSite\\index.html");
+    //Test creation of Website Class
+        Website website = new Website();
+     //Take in Argument Directory
+        website.prepareDirectory(args);
+       //  website.htmlExtractor("C:\\Users\\austi\\Desktop\\WebsiteAnalysisCS350\\BasicSite\\index.html");
         
+        website.listAllNodes();
         //Test call of Output Packager triggering all output functions
         OutputPackager.callOutput();
     }
