@@ -36,4 +36,13 @@ public class JSON {
 		
 		return fileName;
 		}
+
+	/// Generate fileName for .json
+	public String getFileName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	
 }

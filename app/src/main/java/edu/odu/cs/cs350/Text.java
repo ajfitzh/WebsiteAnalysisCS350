@@ -41,4 +41,9 @@ public class Text {
 
 		return fileName;
 	}
+
+	public String getFileName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
