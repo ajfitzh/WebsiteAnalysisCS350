@@ -35,19 +35,21 @@ public class CLI {
 		public static void output() {
 			Excel excel = new Excel();
 			String excelName  = excel.getFileName();
+			System.out.println(excelName);
 			
 		
-		/*	JSON json = new JSON();
+			JSON json = new JSON();
 			String jsonName = json.getFileName();
+			System.out.println(jsonName);
 			
 			Text text = new Text();
 			String textName = text.getFileName();
+			System.out.println(textName);
 			
-			String.out.println(textName);
-			System.out.println(jsonName);
 			
-		*/
-			System.out.println(excelName);
+			
+			
+		
 			
 		
 			
