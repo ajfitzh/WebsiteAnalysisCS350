@@ -1,5 +1,7 @@
 package edu.odu.cs.cs350;
 
+import java.io.File;
+
 public class CLI {
 	//This class is called by OutputPackager and retrieves info from Website, Pages, and others
 	// in order to output to the CLI
@@ -11,6 +13,24 @@ public class CLI {
 		System.out.println(text);
 		System.out.println(excel);
 		*/
+	
+
+	
+		public static void main(String[] argv) {
+			
+			if (argv.length < 1 ) {
+				System.err.println("Argument not found. Please try again");
+				System.exit(1);
+				
+			}
+			
+			else 
+			{
+				File dirName = new File(argv[0]);
+				Website website = new Website(dirName);
+			}
+		}
+	
 		public static void output() {
 			Excel excel = new Excel();
 			String excelName  = excel.getFileName();
