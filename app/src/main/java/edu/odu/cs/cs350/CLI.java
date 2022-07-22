@@ -14,6 +14,7 @@ public class CLI {
 		System.out.println(excel);
 		*/
 	
+	
 
 	
 		public static void main(String[] argv) {
@@ -26,8 +27,8 @@ public class CLI {
 			
 			else 
 			{
-				File dirName = new File(argv[0]);
-				Website website = new Website(dirName);
+				File dirPath = new File(argv[0]);
+				Website website = new Website(dirPath);
 			}
 		}
 	
