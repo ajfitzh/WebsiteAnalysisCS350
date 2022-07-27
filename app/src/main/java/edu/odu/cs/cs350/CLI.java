@@ -16,11 +16,8 @@ public class CLI {
 			String excelName  = excel.getFileName();
 			
 			System.out.println(excelName);
-			
-			
 		}
-		
-}
+	}
 
 
 
