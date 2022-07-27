@@ -52,6 +52,7 @@ public class Website {
 	
 private void listFile(File dir, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles) {
 	File[] files = dir.listFiles();
+	if(files != null) {
 	for (File file: files) {
 		System.out.println(file.getName());
     	try {
@@ -67,6 +68,7 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
 	}
 }
 	//Sorting function for analyzed files
@@ -186,7 +188,7 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 			
 			System.out.println("\nDirectory of " + dir.getAbsolutePath());
 			listFile(dir, pages, images, csssheets, otherFiles);
-			
+			if(subDirs != null) {
 			for(File folder: subDirs) {
 				listFolder(folder, pages, images, csssheets, otherFiles);
 			}
@@ -194,6 +196,7 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 					" Archives:" + archivesCounter + " Audio:" + audioCounter
 					+ " Videos: " + videosCounter + " Uncategorized:" + uncategorizedCounter);
 			}
+	}
 	
 	
 	//Create output packager to allow Website to call the Output function

@@ -21,7 +21,8 @@ public class Text {
 	//NEEDS: list of all local pages (printed one line per page, sorted lexicographically)
 	//NEEDS: local path of page and file size of page
 	//NEEDS or CREATES: total size of all pages added together
-	
+	//string for filename, must have format YYYMMDD-hhmmss-summary.xlsx
+		String filename;
 
 	//output function for .txt file
 	public static String output() {
