@@ -42,7 +42,6 @@ public class Text {
 		return fileName;
 	}
 
-	///Generate fileName for .txt file
 	public String getFileName() {
 		// TODO Auto-generated method stub
 		return null;
