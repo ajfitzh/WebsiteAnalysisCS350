@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 public class TextTest {
     
     String fileName = Text.getFileName();
-    String fileDateTime = fileName.replace("-summary.xlsx", "");
+    String fileDateTime = fileName.replace("-summary.text", "");
     System.out.println(fileName);
     assertNotNull("Text class should generate filename output", fileName);
 }
