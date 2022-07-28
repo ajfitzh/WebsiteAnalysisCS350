@@ -23,12 +23,12 @@ public class ArchiveFileSizeTest {
         long movieSize = 0;
             
         for (OtherFile otherFile: website.otherFiles) {
-        	System.out.println("OTHER FILES-----");
-        	System.out.println(otherFile.id + ". " + otherFile.typetest + " Name: " + otherFile.name + " | size: " + otherFile.fileSize);
+        	//System.out.println("OTHER FILES-----");
+        	//System.out.println(otherFile.id + ". " + otherFile.typetest + " Name: " + otherFile.name + " | size: " + otherFile.fileSize);
         	
         	if(otherFile.typetest == "Audio")
         	{
-        		System.out.println("Gregorian found- does it include the correct fileSize?");
+        		//System.out.println("Gregorian found- does it include the correct fileSize?");
         		//System.out.println("size: " + image.fileSize);
         		audioSize = otherFile.fileSize;
         		assertEquals("audio file gregorian.mp3 should equal 6309639 kb", 6309639, audioSize);
@@ -51,24 +51,19 @@ public class ArchiveFileSizeTest {
                 long movieSize = 0;
                     
                 for (OtherFile otherFile: website.otherFiles) {
-                	System.out.println("OTHER FILES-----");
-                	System.out.println(otherFile.id + ". " + otherFile.typetest + " Name: " + otherFile.name + " | size: " + otherFile.fileSize);
+                	//System.out.println("OTHER FILES-----");
+                	//System.out.println(otherFile.id + ". " + otherFile.typetest + " Name: " + otherFile.name + " | size: " + otherFile.fileSize);
                 	
                 	if(otherFile.typetest == "mov")
                 	{
                 		String moviename;
                 		moviename = otherFile.name;
                 		if(moviename.contains("baby.mov")) {
-                			System.out.println("baby movie found!");
+                			System.out.println("baby movie found! It's path is:" + otherFile.path);
                 			movieSize = otherFile.fileSize;
                 			assertEquals("movie baby movie should equal 4151160 kb", 4151160, movieSize);
                 		}                		        		
                 	}	
-        	//if(otherFile.name == "IMG-1395.MOV")
-        	//{
-        	//	System.out.println("Movie IMG-1395 found- does it include the correct fileSize?");
-        	//	assertEquals("Movie IMG-1395.MOV should equal 20034826 kb", 20034826, movieSize);
-        	//}
         }
      
     }

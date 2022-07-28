@@ -45,7 +45,7 @@ public class Website {
 	//The "starter" function that reads the user argument, input, and reports user errors and requests new entry
 	public void prepareDirectory(String[] args) {
 		
-		System.out.println("Preparing Directory:"+args[0]);
+		//System.out.println("Preparing Directory:"+args[0]);
 		
 		new Website().listFolder(new File(args[0]), pages, images, csssheets, otherFiles);
 	}
@@ -79,7 +79,8 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 				System.out.println("HTML file found and added");
 				
 				System.out.println(name);
-				pages.add(new Page(name, htmlCounter,tempFileSize,"hi"));
+				
+				pages.add(new Page(name, htmlCounter,tempFileSize,fileobject.getPath()));
 				htmlCounter++;
 				break;
 		case "text/css":
@@ -105,23 +106,24 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 				break;
 		case "application/x-zip-compressed":
 				System.out.println("Zip(Archive) file file found and added");
-				otherFiles.add(new OtherFile(name, archivesCounter, "Zip", tempFileSize, "testPath"));
+				otherFiles.add(new OtherFile(name, archivesCounter, "Zip", tempFileSize, fileobject.getPath()));
 				archivesCounter++;
 				break;
 		case "video/quicktime":
 		case "video/mp4":
 				System.out.println("Video(.mov/.mp4) file found and added");
-				otherFiles.add(new OtherFile(name, archivesCounter, "mov", tempFileSize, "testPath"));
+				otherFiles.add(new OtherFile(name, archivesCounter, "mov", tempFileSize, fileobject.getPath()));
 				videosCounter++;
 				break;
 		case "application/pdf":
 				System.out.println("PDF file set as Uncategorized file found and added");
-				otherFiles.add(new OtherFile(name, archivesCounter, "PDF", tempFileSize, "testPath"));
+				otherFiles.add(new OtherFile(name, archivesCounter, "PDF", tempFileSize, fileobject.getPath()));
 				uncategorizedCounter++;
 				break;
 		case "audio/mpeg":
 				System.out.println("Audio file found and added");
-				otherFiles.add(new OtherFile(name, archivesCounter, "Audio", tempFileSize, "testPath"));
+				System.out.println("file path: " + fileobject.getPath());
+				otherFiles.add(new OtherFile(name, archivesCounter, "Audio", tempFileSize, fileobject.getPath()));
 				audioCounter++;
 				break;
 	}
@@ -131,49 +133,7 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 	// Examines HTML, discards default pages like Error 404
 	public void Translator() {}
 	
-	//HTML Extractor extracts anchor tags/links and classifies links as intra-page, intra-site, or external
-	//Extracts Image tags and classifies as internal/external images
-	//Extracts file size for each image, the URI for each image, and local pages on which it is referenced
-	public void htmlExtractor(String htmlfile) {
-		int intrapageLinks = 0;
-		int intersiteLinks = 0;
-		int externalLinks = 0;
-		System.out.println("----Start JSoup Analysis---");
-		//IF it's an HTML file, use JSoup to decipher HTML objects in it
-		File input = new File(htmlfile);
-		try {
-			Document doc = Jsoup.parse(input, "UTF-8", "");
-			
-			System.out.println("--Links--");
-			Elements links = doc.select("a[href]");
-			for(Element link : links) {
-				System.out.println(link.attr("href"));
-				if(link.attr("href").contains("#")) { intrapageLinks++; }
-				else if(link.attr("href").contains("http")) { externalLinks++; }
-				else { intersiteLinks++; }
-			}
-			
-			System.out.println("--Image References--");
-			Elements imagereferences = doc.select("img[src~=(?i)\\.(svg|png|jpe?g|gif)]");
-			for(Element image : imagereferences) {
-				System.out.println(image.attr("src"));
-			}
-			
-			System.out.println("--CSS/JS External References--");
-			Elements cssreferences = doc.select("link");
-			for(Element cssreference : cssreferences) {
-				System.out.println(cssreference.attr("href"));
-				System.out.println(cssreference.attr("src"));
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("Intra-page Links: " + intrapageLinks );
-		System.out.println("Inter-site Links: " + intersiteLinks );
-		System.out.println("External Links  : " + externalLinks );
-			System.out.println("--End of JSoup Analysis--");
-	}
+	
 	
 	//listFolder function
 	void listFolder(File dir, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles) {

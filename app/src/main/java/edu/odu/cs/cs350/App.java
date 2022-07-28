@@ -35,7 +35,7 @@ public class App {
         Website website = new Website();
      //Take in Argument Directory
         website.prepareDirectory(args);
-       //  website.htmlExtractor("C:\\Users\\austi\\Desktop\\WebsiteAnalysisCS350\\BasicSite\\index.html");
+       
         
         website.listAllNodes();
         //Test call of Output Packager triggering all output functions
