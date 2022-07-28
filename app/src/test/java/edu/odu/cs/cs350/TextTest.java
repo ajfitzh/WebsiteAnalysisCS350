@@ -5,9 +5,13 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TextTest {
-   
-    //String fileName = Text.getFileName();
-    //String fileDateTime = fileName.replace("-summary.text", "");
-    //System.out.println(fileName);
-    //assertNotNull("Text class should generate filename output", fileName);
+     @Test public void TextOutputExist() {
+    
+    Text fileName = new Text();
+    
+    assertNotNull("Text class should generate filename output", fileName);
+
+    
+}
+
 }
