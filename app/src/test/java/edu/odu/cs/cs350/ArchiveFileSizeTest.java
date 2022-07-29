@@ -1,8 +1,12 @@
 package edu.odu.cs.cs350;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
 
 import java.io.File;
 
@@ -31,7 +35,7 @@ public class ArchiveFileSizeTest {
         		//System.out.println("Gregorian found- does it include the correct fileSize?");
         		//System.out.println("size: " + image.fileSize);
         		audioSize = otherFile.fileSize;
-        		assertEquals("audio file gregorian.mp3 should equal 6309639 kb", 6309639, audioSize);
+        		assertEquals(6309639, audioSize, "audio file gregorian.mp3 should equal 6309639 kb");
         	}
         }
 	}
@@ -61,7 +65,7 @@ public class ArchiveFileSizeTest {
                 		if(moviename.contains("baby.mov")) {
                 			System.out.println("baby movie found! It's path is:" + otherFile.path);
                 			movieSize = otherFile.fileSize;
-                			assertEquals("movie baby movie should equal 4151160 kb", 4151160, movieSize);
+                			assertEquals(4151160, movieSize, "movie baby movie should equal 4151160 kb");
                 		}                		        		
                 	}	
         }

@@ -1,8 +1,13 @@
 
 package edu.odu.cs.cs350;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
 import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -12,7 +17,7 @@ public class TextTest {
     
     Text fileName = new Text();
     
-    assertNotNull("Text class should generate filename output", fileName);
+    assertNotNull(fileName, "Text class should generate filename output");
 
     
 }

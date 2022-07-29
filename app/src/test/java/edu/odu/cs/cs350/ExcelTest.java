@@ -1,7 +1,12 @@
 package edu.odu.cs.cs350;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
 
 import java.time.format.DateTimeFormatter;
 import java.time.format.ResolverStyle;
