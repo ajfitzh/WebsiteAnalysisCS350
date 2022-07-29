@@ -1,3 +1,0 @@
-function hellomsg(){  
-    alert("Hello");  
-   }  
