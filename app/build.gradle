@@ -19,6 +19,7 @@ plugins {
 
 	id 'checkstyle'
 
+	id 'project-report'
 	//connect to git functionality
 	id "org.xbib.gradle.plugin.git" version "2.0.0"
 }
@@ -69,7 +70,7 @@ jar {
 
 run {
 	main = 'edu.odu.cs.cs350.App'
-	//args = []
+	args = ['\\app\\src\\test\\resources\\BasicSite']
 }
 
 
@@ -164,7 +165,7 @@ task deployReports {
 	//copy the build/docs directory and contents to docs/ directory in gh-pages branch
 	task copyBuildDocs ( type: Copy) {
 		from 'build/docs'
-		into 'docs' //how do add gh-pages branch?
+		into 'docs/' //how do add gh-pages branch?
 	}
 	//copy the build/reports directory and contents to reports/ directory in gh-pages branch
 		task copyBuildReports ( type: Copy) {
