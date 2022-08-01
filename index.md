@@ -4,3 +4,6 @@ Group 5
 
 *[Tests](./reports/tests/test/index.html)
 *[JavaDoc](./docs/javadoc/index.html)
+*[SpotBugs](./reports/spotbugs/main.html)
+*[pmd](./reports/pmd/main.html)
+*[checkstyle](./reports/checkstyle/main.html)
