@@ -85,7 +85,7 @@ run {
 test {
 
 	useJUnitPlatform()
-	useJUnit()
+
 	reports {
 		html.required = true
 	}
