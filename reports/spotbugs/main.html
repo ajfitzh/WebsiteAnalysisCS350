@@ -1,0 +1,767 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta charset="UTF-8"/>
+      <title>SpotBugs Report</title>
+      <style type="text/css">
+		.tablerow0 {
+			background: #EEEEEE;
+		}
+
+		.tablerow1 {
+			background: white;
+		}
+
+		.detailrow0 {
+			background: #EEEEEE;
+		}
+
+		.detailrow1 {
+			background: white;
+		}
+
+		.tableheader {
+			background: #b9b9fe;
+			font-size: larger;
+		}
+
+		.tablerow0:hover, .tablerow1:hover {
+			background: #aaffaa;
+		}
+
+		.priority-1 {
+				color: red;
+				font-weight: bold;
+		}
+		.priority-2 {
+				color: orange;
+				font-weight: bold;
+		}
+		.priority-3 {
+				color: green;
+				font-weight: bold;
+		}
+		.priority-4 {
+				color: blue;
+				font-weight: bold;
+		}
+		</style>
+      <script type="text/javascript">
+			function toggleRow(elid) {
+				if (document.getElementById) {
+					element = document.getElementById(elid);
+					if (element) {
+						if (element.style.display == 'none') {
+							element.style.display = 'block';
+							//window.status = 'Toggle on!';
+						} else {
+							element.style.display = 'none';
+							//window.status = 'Toggle off!';
+						}
+					}
+				}
+			}
+		</script>
+   </head>
+   <body>
+      <h1>
+         <a href="https://spotbugs.github.io/">SpotBugs</a> Report</h1>
+      <h2>Project Information</h2>
+      <p>Project: 
+		app (spotbugsMain)</p>
+      <p>SpotBugs version: 4.7.1</p>
+      <p>Code analyzed:</p>
+      <ul>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\App.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\CLI.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\CSS.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Excel.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Image.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\JavaScript.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\JSON.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\OtherFile$fileType.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\OtherFile.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\OutputPackager.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Page.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Text.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Website$1.class</li>
+         <li>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Website.class</li>
+      </ul>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Metrics</h2>
+      <p>383 lines of code analyzed,
+	in 14 classes, 
+	in 1 packages.</p>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Metric</th>
+            <th align="right">Total</th>
+            <th align="right">Density*</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>High Priority Warnings</td>
+            <td align="right">3</td>
+            <td align="right">7.83</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>Medium Priority Warnings</td>
+            <td align="right">27</td>
+            <td align="right">70.50</td>
+         </tr>
+         <tr class="$totalClass">
+            <td>
+               <b>Total Warnings</b>
+            </td>
+            <td align="right">
+               <b>30</b>
+            </td>
+            <td align="right">
+               <b>78.33</b>
+            </td>
+         </tr>
+      </table>
+      <p>
+         <i>(* Defects per Thousand lines of non-commenting source statements)</i>
+      </p>
+      <p>
+         <br/>
+         <br/>
+      </p>
+      <h2>Contents</h2>
+      <ul>
+         <li>
+            <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_I18N">Internationalization Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+         </li>
+         <li>
+            <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+         </li>
+         <li>
+            <a href="#Details">Details</a>
+         </li>
+      </ul>
+      <h1>Summary</h1>
+      <table width="500" cellpadding="5" cellspacing="2">
+         <tr class="tableheader">
+            <th align="left">Warning Type</th>
+            <th align="right">Number</th>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+            </td>
+            <td align="right">2</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_I18N">Internationalization Warnings</a>
+            </td>
+            <td align="right">2</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <a href="#Warnings_PERFORMANCE">Performance Warnings</a>
+            </td>
+            <td align="right">21</td>
+         </tr>
+         <tr class="tablerow1">
+            <td>
+               <a href="#Warnings_STYLE">Dodgy code Warnings</a>
+            </td>
+            <td align="right">5</td>
+         </tr>
+         <tr class="tablerow0">
+            <td>
+               <b>Total</b>
+            </td>
+            <td align="right">
+               <b>30</b>
+            </td>
+         </tr>
+      </table>
+      <h1>Warnings</h1>
+      <p>Click on a warning row to see full context information.</p>
+      <h2>
+         <a name="Warnings_BAD_PRACTICE">Bad practice Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e359');">
+            <td>
+               <span class="priority-2">Nm</span>
+            </td>
+            <td>The class name edu.odu.cs.cs350.OtherFile$fileType doesn't start with an upper case letter</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e359" style="display: none;">
+                  <a href="#NM_CLASS_NAMING_CONVENTION">Bug type NM_CLASS_NAMING_CONVENTION (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.OtherFile$fileType<br/>At OtherFile.java:[line 7]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e462');">
+            <td>
+               <span class="priority-2">Nm</span>
+            </td>
+            <td>The method name edu.odu.cs.cs350.Website.Translator() doesn't start with a lower case letter</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e462" style="display: none;">
+                  <a href="#NM_METHOD_NAMING_CONVENTION">Bug type NM_METHOD_NAMING_CONVENTION (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Website<br/>In method edu.odu.cs.cs350.Website.Translator()<br/>At Website.java:[line 134]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_I18N">Internationalization Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e292');">
+            <td>
+               <span class="priority-1">Dm</span>
+            </td>
+            <td>Found reliance on default encoding in edu.odu.cs.cs350.JSON.output(): new java.io.FileWriter(String)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e292" style="display: none;">
+                  <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.JSON<br/>In method edu.odu.cs.cs350.JSON.output()<br/>Called method new java.io.FileWriter(String)<br/>At JSON.java:[line 28]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e434');">
+            <td>
+               <span class="priority-1">Dm</span>
+            </td>
+            <td>Found reliance on default encoding in edu.odu.cs.cs350.Text.output(): new java.io.FileWriter(String)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e434" style="display: none;">
+                  <a href="#DM_DEFAULT_ENCODING">Bug type DM_DEFAULT_ENCODING (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Text<br/>In method edu.odu.cs.cs350.Text.output()<br/>Called method new java.io.FileWriter(String)<br/>At Text.java:[line 36]</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_PERFORMANCE">Performance Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e182');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: edu.odu.cs.cs350.CSS.classification</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e182" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.CSS<br/>Field edu.odu.cs.cs350.CSS.classification<br/>At CSS.java:[line 22]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e195');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: edu.odu.cs.cs350.CSS.uri</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e195" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.CSS<br/>Field edu.odu.cs.cs350.CSS.uri<br/>At CSS.java:[line 24]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e252');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: edu.odu.cs.cs350.Image.classification</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e252" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Image<br/>Field edu.odu.cs.cs350.Image.classification<br/>At Image.java:[line 18]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e265');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: edu.odu.cs.cs350.Image.uri</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e265" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Image<br/>Field edu.odu.cs.cs350.Image.uri<br/>At Image.java:[line 20]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e307');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: edu.odu.cs.cs350.JavaScript.classification</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e307" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.JavaScript<br/>Field edu.odu.cs.cs350.JavaScript.classification<br/>At JavaScript.java:[line 21]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e320');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: edu.odu.cs.cs350.JavaScript.uri</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e320" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.JavaScript<br/>Field edu.odu.cs.cs350.JavaScript.uri<br/>At JavaScript.java:[line 23]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e346');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: edu.odu.cs.cs350.OtherFile.path</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e346" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.OtherFile<br/>Field edu.odu.cs.cs350.OtherFile.path<br/>At OtherFile.java:[line 22]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e368');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: edu.odu.cs.cs350.Page.path</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e368" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Page<br/>Field edu.odu.cs.cs350.Page.path<br/>At Page.java:[line 30]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e502');">
+            <td>
+               <span class="priority-2">UrF</span>
+            </td>
+            <td>Unread field: edu.odu.cs.cs350.Website.Output</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e502" style="display: none;">
+                  <a href="#URF_UNREAD_FIELD">Bug type URF_UNREAD_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Website<br/>Field edu.odu.cs.cs350.Website.Output<br/>At Website.java:[line 163]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e208');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.CSS.references</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e208" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.CSS<br/>Field edu.odu.cs.cs350.CSS.references<br/>In CSS.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e239');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Excel.filename</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e239" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Excel<br/>Field edu.odu.cs.cs350.Excel.filename<br/>In Excel.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e278');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Image.references</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e278" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Image<br/>Field edu.odu.cs.cs350.Image.references<br/>In Image.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e333');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.JavaScript.references</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e333" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.JavaScript<br/>Field edu.odu.cs.cs350.JavaScript.references<br/>In JavaScript.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e381');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Page.css</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e381" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Page<br/>Field edu.odu.cs.cs350.Page.css<br/>In Page.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e394');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Page.images</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e394" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Page<br/>Field edu.odu.cs.cs350.Page.images<br/>In Page.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e407');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Page.javascript</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e407" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Page<br/>Field edu.odu.cs.cs350.Page.javascript<br/>In Page.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e420');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Page.links</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e420" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Page<br/>Field edu.odu.cs.cs350.Page.links<br/>In Page.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e449');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Text.filename</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e449" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Text<br/>Field edu.odu.cs.cs350.Text.filename<br/>In Text.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e515');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Website.baseURLs</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e515" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Website<br/>Field edu.odu.cs.cs350.Website.baseURLs<br/>In Website.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e528');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Website.name</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e528" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Website<br/>Field edu.odu.cs.cs350.Website.name<br/>In Website.java</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e541');">
+            <td>
+               <span class="priority-2">UuF</span>
+            </td>
+            <td>Unused field: edu.odu.cs.cs350.Website.totalSize</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e541" style="display: none;">
+                  <a href="#UUF_UNUSED_FIELD">Bug type UUF_UNUSED_FIELD (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Website<br/>Field edu.odu.cs.cs350.Website.totalSize<br/>In Website.java</p>
+            </td>
+         </tr>
+      </table>
+      <h2>
+         <a name="Warnings_STYLE">Dodgy code Warnings</a>
+      </h2>
+      <table class="warningtable" width="100%" cellspacing="0">
+         <tr class="tableheader">
+            <th align="left">Code</th>
+            <th align="left">Warning</th>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e153');">
+            <td>
+               <span class="priority-2">DCN</span>
+            </td>
+            <td>Do not catch NullPointerException like in edu.odu.cs.cs350.App.isValidPath(String)</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e153" style="display: none;">
+                  <a href="#DCN_NULLPOINTER_EXCEPTION">Bug type DCN_NULLPOINTER_EXCEPTION (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.App<br/>In method edu.odu.cs.cs350.App.isValidPath(String)<br/>At App.java:[line 88]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e165');">
+            <td>
+               <span class="priority-1">DLS</span>
+            </td>
+            <td>Dead store to file in edu.odu.cs.cs350.App.checkIfDirectoryEmptyOrInvalid(String)</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e165" style="display: none;">
+                  <a href="#DLS_DEAD_LOCAL_STORE">Bug type DLS_DEAD_LOCAL_STORE (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.App<br/>In method edu.odu.cs.cs350.App.checkIfDirectoryEmptyOrInvalid(String)<br/>Local variable named file<br/>At App.java:[line 57]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e474');">
+            <td>
+               <span class="priority-2">NP</span>
+            </td>
+            <td>Possible null pointer dereference in edu.odu.cs.cs350.Website.listFile(File, Collection, Collection, Collection, Collection) due to return value of called method</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e474" style="display: none;">
+                  <a href="#NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">Bug type NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Website<br/>In method edu.odu.cs.cs350.Website.listFile(File, Collection, Collection, Collection, Collection)<br/>Local variable stored in JVM register ?<br/>Method invoked at Website.java:[line 64]<br/>Known null at Website.java:[line 64]</p>
+            </td>
+         </tr>
+         <tr class="tablerow0" onclick="toggleRow('d2e490');">
+            <td>
+               <span class="priority-2">SF</span>
+            </td>
+            <td>Switch statement found in edu.odu.cs.cs350.Website.sort(String, File, Collection, Collection, Collection, Collection, long) where default case is missing</td>
+         </tr>
+         <tr class="detailrow0">
+            <td/>
+            <td>
+               <p id="d2e490" style="display: none;">
+                  <a href="#SF_SWITCH_NO_DEFAULT">Bug type SF_SWITCH_NO_DEFAULT (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Website<br/>In method edu.odu.cs.cs350.Website.sort(String, File, Collection, Collection, Collection, Collection, long)<br/>At Website.java:[lines 77-127]</p>
+            </td>
+         </tr>
+         <tr class="tablerow1" onclick="toggleRow('d2e221');">
+            <td>
+               <span class="priority-2">UC</span>
+            </td>
+            <td>Useless object stored in variable webSiteData of method edu.odu.cs.cs350.Excel.output()</td>
+         </tr>
+         <tr class="detailrow1">
+            <td/>
+            <td>
+               <p id="d2e221" style="display: none;">
+                  <a href="#UC_USELESS_OBJECT">Bug type UC_USELESS_OBJECT (click for details)</a>
+                  <br/>In class edu.odu.cs.cs350.Excel<br/>In method edu.odu.cs.cs350.Excel.output()<br/>Value webSiteData<br/>Type java.util.TreeMap<br/>At Excel.java:[line 44]</p>
+            </td>
+         </tr>
+      </table>
+      <h1>
+         <a name="Details">Details</a>
+      </h1>
+      <h2>
+         <a name="DCN_NULLPOINTER_EXCEPTION">DCN_NULLPOINTER_EXCEPTION: NullPointerException caught</a>
+      </h2>
+   
+<p>
+According to SEI Cert rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/ERR08-J.+Do+not+catch+NullPointerException+or+any+of+its+ancestors">ERR08-J</a> NullPointerException should not be caught. Handling NullPointerException is considered an inferior alternative to null-checking.
+<p>
+This non-compliant code catches a NullPointerException to see if an incoming parameter is null:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+  try {
+    String ms[] = m.split(" ");
+    return names.length != 1;
+  } catch (NullPointerException e) {
+    return false;
+  }
+}
+</code></pre>
+<p>
+A compliant solution would use a null-check as in the following example:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+    if (m == null) return false;
+    String ms[] = m.split(" ");
+    return names.length != 1;
+}
+</code></pre>
+    
+     <h2>
+         <a name="DLS_DEAD_LOCAL_STORE">DLS_DEAD_LOCAL_STORE: Dead store to local variable</a>
+      </h2>
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    <h2>
+         <a name="DM_DEFAULT_ENCODING">DM_DEFAULT_ENCODING: Reliance on default encoding</a>
+      </h2>
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      <h2>
+         <a name="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE">NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE: Possible null pointer dereference due to return value of called method</a>
+      </h2>
+      
+<p> The return value from a method is dereferenced without a null check,
+and the return value of that method is one that should generally be checked
+for null.  This may lead to a <code>NullPointerException</code> when the code is executed.
+</p>
+      
+   <h2>
+         <a name="NM_CLASS_NAMING_CONVENTION">NM_CLASS_NAMING_CONVENTION: Class names should start with an upper case letter</a>
+      </h2>
+
+  <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    <h2>
+         <a name="NM_METHOD_NAMING_CONVENTION">NM_METHOD_NAMING_CONVENTION: Method names should start with a lower case letter</a>
+      </h2>
+
+  <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</p>
+
+    <h2>
+         <a name="SF_SWITCH_NO_DEFAULT">SF_SWITCH_NO_DEFAULT: Switch statement found where default case is missing</a>
+      </h2>
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    <h2>
+         <a name="UC_USELESS_OBJECT">UC_USELESS_OBJECT: Useless object created</a>
+      </h2>
+
+<p>Our analysis shows that this object is useless.
+It's created and modified, but its value never go outside of the method or produce any side-effect.
+Either there is a mistake and object was intended to be used or it can be removed.</p>
+<p>This analysis rarely produces false-positives. Common false-positive cases include:</p>
+<p>- This object used to implicitly throw some obscure exception.</p>
+<p>- This object used as a stub to generalize the code.</p>
+<p>- This object used to hold strong references to weak/soft-referenced objects.</p>
+
+    <h2>
+         <a name="URF_UNREAD_FIELD">URF_UNREAD_FIELD: Unread field</a>
+      </h2>
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    <h2>
+         <a name="UUF_UNUSED_FIELD">UUF_UNUSED_FIELD: Unused field</a>
+      </h2>
+
+  <p> This field is never used.&nbsp; Consider removing it from the class.</p>
+
+    </body>
+</html>

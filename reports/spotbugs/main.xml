@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.7.1" sequence="0" timestamp="1659372665043" analysisTimestamp="1659372665043" release="">
+  <Project projectName="app (spotbugsMain)">
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\App.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\CLI.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\CSS.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Excel.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Image.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\JavaScript.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\JSON.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\OtherFile$fileType.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\OtherFile.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\OutputPackager.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Page.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Text.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Website$1.class</Jar>
+    <Jar>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\build\classes\java\main\edu\odu\cs\cs350\Website.class</Jar>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.tika\tika-parsers\1.28.4\72a06288703c4a246076df841d27750724c30d04\tika-parsers-1.28.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\edu.ucar\netcdf4\4.5.5\675d63ecc857c50dd50858011b670160aa30b62\netcdf4-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\edu.ucar\grib\4.5.5\cfe552910e9a8d57ce71134796abb281a74ead16\grib-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\edu.ucar\cdm\4.5.5\af1748a3d024069cb7fd3fc2591efe806c914589\cdm-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\31.1-jre\60458f877d055d0c9114d9e1a2efb737b4bc282c\guava-31.1-jre.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.poi\poi-scratchpad\5.2.2\8c5cd5f1b3e7b3656ab983b73bbbf8bf5f14f793\poi-scratchpad-5.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.poi\poi-ooxml\5.2.2\a201b5bdc92c0fae4bed4b8e5546388c4c2f9eb0\poi-ooxml-5.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.poi\poi\5.2.2\5513d31545085c33809c4b6553c2009fd19a6016\poi-5.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.17.2\fa43ba4467f5300b16d1e0742934149bfc5ac564\log4j-core-2.17.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.poi\poi-ooxml-lite\5.2.2\5df31b69375131fc2163a5557093cb112be90ce1\poi-ooxml-lite-5.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.xmlbeans\xmlbeans\5.0.3\e1ef1382ae9dfb2438b82b6dd575566355c2f30f\xmlbeans-5.0.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.17.2\f42d6afa111b4dec5d2aea0fe2197240749a4ea6\log4j-api-2.17.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.jsoup\jsoup\1.15.1\c4e25ce7c04dc4ae8f6db08f2391f38e9111231f\jsoup-1.15.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.jbake\jbake-gradle-plugin\5.0.0\bc6a2bdda5b3a0c613554e301a989d4126c15547\jbake-gradle-plugin-5.0.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.12.0\d5692f0526415fcc6de94bb5bfbd3afd9dd3b3e5\checker-qual-3.12.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.11.0\c5a0ace696d3f8b1c1d8cc036d8c03cc0cbe6b69\error_prone_annotations-2.11.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\edu.ucar\httpservices\4.5.5\ee5f217be599e5e03f7f0e55e03f9e721a154f62\httpservices-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpmime\4.5.13\efc110bad4a0d45cda7858e6beee1d8a8313da5a\httpmime-4.5.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.5.13\e5f6cae5ca7ecaac1ec2827a9e2d65ae2869cada\httpclient-4.5.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.15\49d94806b6e3dc933dacbd8acb0fdbab8ebd1e5d\commons-codec-1.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-collections4\4.4\62ebe7544cb7164d87e0637a2a6a2bdc981395e8\commons-collections4-4.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-math3\3.6.1\e4ba98f1d4b3c80ec46392f25e094a6a2e58fcbf\commons-math3-3.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.tika\tika-core\1.28.4\88e05b1325d5588a70794b338e0b249acd08b8ab\tika-core-1.28.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.11.0\a2503f302b11ebde7ebc3df41daebe0e4eea3689\commons-io-2.11.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.zaxxer\SparseBitSet\1.2\8467c813d442837fcaeddbc42cf5c5359fab4933\SparseBitSet-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\xerces\xercesImpl\2.12.2\f051f988aa2c9b4d25d05f95742ab0cc3ed789e2\xercesImpl-2.12.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.fasterxml.woodstox\woodstox-core\6.2.8\670748292899c53b1963730d9eb7f8ab71314e90\woodstox-core-6.2.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.12.0\c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e\commons-lang3-3.12.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.gagravarr\vorbis-java-tika\0.8\4ddbb27ac5884a0f0398a63d46a89d3bc87dc457\vorbis-java-tika-0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.tallison\jmatio\1.5\517d932cc87a3b564f3f7a07ac347b725b619ab4\jmatio-1.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.james\apache-mime4j-dom\0.8.4\dfdfdbc095017ffbaef308e80ff7ca53b1a6ff08\apache-mime4j-dom-0.8.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.james\apache-mime4j-core\0.8.4\a7e552628c6587bdd1e2036045f1e06c4d513e32\apache-mime4j-core-0.8.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.googlecode.plist\dd-plist\1.23\f522894abd90d6f5a15e9586e625407a7d50e80d\dd-plist-1.23.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.21\4ec95b60d4e86b5c95a0e919cb172a0af98011ef\commons-compress-1.21.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.tukaani\xz\1.9\1ea4bec1a921180164852c65006d928617bd2caf\xz-1.9.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.epam\parso\2.0.14\a02ea1b198c410a105d261efd2d7043739aecd8e\parso-2.0.14.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.brotli\dec\0.1.2\c26a897ae0d524809eef1c786cc6183b4ddcc3b\dec-0.1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.pdfbox\preflight\2.0.26\cb7c63b5bf0ad010d76cd56dbb4c136a096a78c7\preflight-2.0.26.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.pdfbox\pdfbox\2.0.26\67b85a6aea4a1c846448e3513161d6c260d6e0d9\pdfbox-2.0.26.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.pdfbox\pdfbox-tools\2.0.26\c8a812df7d025dd39c84bd88500a3ad2c2fca8f3\pdfbox-tools-2.0.26.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.pdfbox\jempbox\1.8.16\1f41de81768ef84ca2d8cda4cb79e9272c8ee966\jempbox-1.8.16.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.pdfbox\xmpbox\2.0.26\7ca4ee67fd06f822467daa08749ba3c2874cf44e\xmpbox-2.0.26.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.bouncycastle\bcmail-jdk15on\1.70\8f4aafad90f6cc7f16b9992279828ae848c9e0d\bcmail-jdk15on-1.70.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.bouncycastle\bcpkix-jdk15on\1.70\f81e5af49571a9d5a109a88f239a73ce87055417\bcpkix-jdk15on-1.70.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.bouncycastle\bcutil-jdk15on\1.70\54280e7195a7430d7911ded93fc01e07300b9526\bcutil-jdk15on-1.70.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.bouncycastle\bcprov-jdk15on\1.70\4636a0d01f74acaf28082fb62b317f1080118371\bcprov-jdk15on-1.70.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.healthmarketscience.jackcess\jackcess\4.0.1\e9953ac607c1d85647d6bc364579a871ef069441\jackcess-4.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.healthmarketscience.jackcess\jackcess-encrypt\4.0.1\2fbb076c291767197b5b8202bfebdcd4b4a7199e\jackcess-encrypt-4.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.ccil.cowan.tagsoup\tagsoup\1.2.1\5584627487e984c03456266d3f8802eb85a9ce97\tagsoup-1.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm\9.3\8e6300ef51c1d801a7ed62d07cd221aca3a90640\asm-9.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.tallison\isoparser\1.9.41.7\97c87c0ab2c435e16380e6377bbe0c819f7eb9a1\isoparser-1.9.41.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.tallison\metadata-extractor\2.17.1.0\62401276745fc186ea44e94fcd54502fce2e22f6\metadata-extractor-2.17.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\de.l3s.boilerpipe\boilerpipe\1.1.0\f62cb75ed52455a9e68d1d05b84c500673340eb2\boilerpipe-1.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.rometools\rome\1.18.0\bdc2933175bb9d92b41e4ace771f645f524d75d3\rome-1.18.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.gagravarr\vorbis-java-core\0.8\7e9937c2575cda2e3fc116415117c74f23e43fa6\vorbis-java-core-0.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.googlecode.juniversalchardet\juniversalchardet\1.0.3\cd49678784c46aa8789c060538e0154013bb421b\juniversalchardet-1.0.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.codelibs\jhighlight\1.1.0\8ae20cc1eadb26bbc721611d509b808bf41d1a14\jhighlight-1.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.pff\java-libpst\0.9.3\928a6698850cd89577d28201ff1ac443bb339d2b\java-libpst-0.9.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.github.junrar\junrar\7.5.2\c07583bb5f17e0eaf852955f94f809faf4c33680\junrar-7.5.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.cxf\cxf-rt-rs-client\3.5.2\951c6e1f425b94c4568710c895f277c725550db9\cxf-rt-rs-client-3.5.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.cxf\cxf-rt-frontend-jaxrs\3.5.2\87c71f9ad4e31b4349d3091283e09b6b5c4d8457\cxf-rt-frontend-jaxrs-3.5.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.cxf\cxf-rt-transports-http\3.5.2\bd9927ca64a59605cb42be28e29d5d6676d8dc23\cxf-rt-transports-http-3.5.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.cxf\cxf-rt-security\3.5.2\74f8a2607e26d0d0cfc62cf99d9c3cae20b3544f\cxf-rt-security-3.5.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.cxf\cxf-core\3.5.2\b5894c106938db9fe446020fc1653ba9d271af6b\cxf-core-3.5.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\jaxb-runtime\2.3.5\a169a961a2bb9ac69517ec1005e451becf5cdfab\jaxb-runtime-2.3.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-exec\1.3\8dfb9facd0830a27b1b5f29f84593f0aeee7773b\commons-exec-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.opennlp\opennlp-tools\1.9.4\dd5c4a6d82453bcccb78ba4ac90f166366dde12b\opennlp-tools-1.9.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.googlecode.json-simple\json-simple\1.1.1\c9ad4a0850ab676c5c64461a05ca524cdfff59f1\json-simple-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.github.openjson\openjson\1.0.12\9c0663c10b48a889709a2d125580a3f22b975769\openjson-1.0.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.9.0\8a1167e089096758b49f9b34066ef98b2f4b37aa\gson-2.9.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.slf4j\jul-to-slf4j\1.7.36\ed46d81cef9c412a88caef405b58f93a678ff2ca\jul-to-slf4j-1.7.36.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.slf4j\jcl-over-slf4j\1.7.36\d877e195a05aca4a2f1ad2ff14bfec1393af4b5e\jcl-over-slf4j-1.7.36.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.quartz-scheduler\quartz\2.3.2\18a6d6b5a40b77bd060b34cb9f2acadc4bae7c8a\quartz-2.3.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.rometools\rome-utils\1.18.0\3dc676ae59ab0be7ccd2bd6d2214779b97eec7db\rome-utils-1.18.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\net.sf.ehcache\ehcache-core\2.6.2\3baecd92015a9f8fe4cf51c8b5d3a5bddcdd3e86\ehcache-core-2.6.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.zaxxer\HikariCP-java7\2.4.13\3e441eddedb374d4de8e3abbb0c90997f51cc97b\HikariCP-java7-2.4.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.slf4j\slf4j-api\1.7.36\6c62681a2f655b49963a5983b8b0950a6120ae14\slf4j-api-1.7.36.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.jdom\jdom2\2.0.6.1\dc15dff8f701b227ee523eeb7a17f77c10eafe2f\jdom2-2.0.6.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\edu.ucar\udunits\4.5.5\d8c8d65ade13666eedcf764889c69321c247f153\udunits-4.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\net.jcip\jcip-annotations\1.0\afba4942caaeaf46aab0b976afd57cc7c181467e\jcip-annotations-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.beust\jcommander\1.82\a7c5fef184d238065de38f81bbc6ee50cca2e21\jcommander-1.82.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\net.java.dev.jna\jna\5.11.0\27770efb6329f092f895c7329662d1aa8ee8c0ac\jna-5.11.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.google.protobuf\protobuf-java\3.19.4\748e4e0b9e4fa6b9b1fe65690aa04a9db56cfc4d\protobuf-java-3.19.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.mchange\c3p0\0.9.5.5\37dfc3021e5589d65ff2ae0becf811510b87ab01\c3p0-0.9.5.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-csv\1.9.0\b59d8f64cd0b83ee1c04ff1748de2504457018c1\commons-csv-1.9.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.sis.storage\sis-netcdf\1.2\ebddba8b6f4d120dda1f994fa0291d5bede0b4c5\sis-netcdf-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.sis.storage\sis-storage\1.2\68a072b6bef666ea82c080beaf25a70c6eb7b684\sis-storage-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.sis.core\sis-feature\1.2\8450c2e644e68442835e73e52280e3ee02e1eeb3\sis-feature-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.sis.core\sis-referencing\1.2\ef855fe6d91b6f30cb4da753c6506926b8d19164\sis-referencing-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.sis.core\sis-metadata\1.2\61bf6428547d3c4d721df4a2855fe09b2452f5\sis-metadata-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.sis.core\sis-utility\1.2\b733c53021023a05a3aea756a53f0abdbb88ceef\sis-utility-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.opengis\geoapi\3.0.1\a69b261841b0794b82b8d42fcd6e9a370eb62809\geoapi-3.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\edu.usc.ir\sentiment-analysis-parser\0.1\20d1524a1270c1d26e3314d2ee71a12e6a29a27d\sentiment-analysis-parser-0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.13.3\7198b3aac15285a49e218e08441c5f70af00fc51\jackson-annotations-2.13.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.13.3\56deb9ea2c93a7a556b3afbedd616d342963464e\jackson-databind-2.13.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.13.3\a27014716e4421684416e5fa83d896ddb87002da\jackson-core-2.13.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.pdfbox\jbig2-imageio\3.0.4\ad09a9bb94ea791ea81fb6c5bc2b13dd77872598\jbig2-imageio-3.0.4.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.github.jai-imageio\jai-imageio-core\1.4.0\fb6d79b929556362a241b2f65a04e538062f0077\jai-imageio-core-1.4.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.github.zafarkhaja\java-semver\0.9.0\59a83ca73c72a5e25b3f0b1bb305230a11000329\java-semver-0.9.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\xml-apis\xml-apis\1.4.01\3789d9fada2d3d458c4ba2de349d48780f381ee3\xml-apis-1.4.01.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.codehaus.woodstox\stax2-api\4.2.1\a3f7325c52240418c2ba257b103c3c550e140c83\stax2-api-4.2.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.pdfbox\fontbox\2.0.26\4e416198adde54b753e41d3312f799640dac5687\fontbox-2.0.26.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.2\4bfc12adfe4842bf07b657f0369c4cb522955686\commons-logging-1.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.github.virtuald\curvesapi\1.07\863654849995f9d4f0ed2ed1a3870da3a108473c\curvesapi-1.07.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.tallison.xmp\xmpcore-shaded\6.1.10\4f3c0f614c5efc78661c1adb5922eccd47d99bcc\xmpcore-shaded-6.1.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\jakarta.xml.bind\jakarta.xml.bind-api\2.3.3\48e3b9cfc10752fba3521d6511f4165bea951801\jakarta.xml.bind-api-2.3.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.glassfish.jaxb\txw2\2.3.5\ec8930fa62e7b1758b1664d135f50c7abe86a4a3\txw2-2.3.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.sun.istack\istack-commons-runtime\3.0.12\cbbe1a62b0cc6c85972e99d52aaee350153dc530\istack-commons-runtime-3.0.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.itadaki\bzip2\0.9.1\47ca95f71e3ccae756c4a24354d48069c58f475c\bzip2-0.9.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.4.13\853b96d3afbb7bf8cc303fe27ee96836a10c1834\httpcore-4.4.13.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.2\a5f29a7acaddea3f4af307e8cf2d0cc82645fd7d\joda-time-2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.mchange\mchange-commons-java\0.2.19\7a4bee38ea02bd7dee776869b19fb3f6861d6acf\mchange-commons-java-0.2.19.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\javax.measure\unit-api\1.0\6b960260278588d7ff02fe376e5aad39a9c7440b\unit-api-1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\com.adobe.xmp\xmpcore\6.1.10\7703eea153ccf2f43b6962521c5ad67485cd5272\xmpcore-6.1.10.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\org.apache.ws.xmlschema\xmlschema-core\2.3.0\5b99c4a647ee7155fcab0f7ec2a8737129281d68\xmlschema-core-2.3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\jakarta.ws.rs\jakarta.ws.rs-api\2.1.6\1dcb770bce80a490dff49729b99c7a60e9ecb122\jakarta.ws.rs-api-2.1.6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\jakarta.annotation\jakarta.annotation-api\1.3.5\59eb84ee0d616332ff44aba065f3888cf002cd2d\jakarta.annotation-api-1.3.5.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\austi\.gradle\caches\modules-2\files-2.1\jakarta.activation\jakarta.activation-api\1.2.2\99f53adba383cb1bf7c3862844488574b559621f\jakarta.activation-api-1.2.2.jar</AuxClasspathEntry>
+    <SrcDir>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\src\main\resources</SrcDir>
+    <SrcDir>C:\Users\austi\Desktop\WebsiteAnalysisCS350\app\src\main\java</SrcDir>
+  </Project>
+  <BugInstance type="DCN_NULLPOINTER_EXCEPTION" priority="2" rank="17" abbrev="DCN" category="STYLE" instanceHash="3cc77b18bac250832b5fee8f57ac899d" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>NullPointerException caught</ShortMessage>
+    <LongMessage>Do not catch NullPointerException like in edu.odu.cs.cs350.App.isValidPath(String)</LongMessage>
+    <Class classname="edu.odu.cs.cs350.App" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.App" start="15" end="101" sourcefile="App.java" sourcepath="edu/odu/cs/cs350/App.java" relSourcepath="java\edu\odu\cs\cs350\App.java">
+        <Message>At App.java:[lines 15-101]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.App</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.App" name="isValidPath" signature="(Ljava/lang/String;)Z" isStatic="true" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.App" start="87" end="91" startBytecode="0" endBytecode="113" sourcefile="App.java" sourcepath="edu/odu/cs/cs350/App.java" relSourcepath="java\edu\odu\cs\cs350\App.java"/>
+      <Message>In method edu.odu.cs.cs350.App.isValidPath(String)</Message>
+    </Method>
+    <SourceLine classname="edu.odu.cs.cs350.App" primary="true" start="88" end="88" startBytecode="12" endBytecode="12" sourcefile="App.java" sourcepath="edu/odu/cs/cs350/App.java" relSourcepath="java\edu\odu\cs\cs350\App.java">
+      <Message>At App.java:[line 88]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DLS_DEAD_LOCAL_STORE" priority="1" rank="15" abbrev="DLS" category="STYLE" instanceHash="50ebaf8de97eba8e1f5191e2d6ae6b17" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="563">
+    <ShortMessage>Dead store to local variable</ShortMessage>
+    <LongMessage>Dead store to file in edu.odu.cs.cs350.App.checkIfDirectoryEmptyOrInvalid(String)</LongMessage>
+    <Class classname="edu.odu.cs.cs350.App" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.App" start="15" end="101" sourcefile="App.java" sourcepath="edu/odu/cs/cs350/App.java" relSourcepath="java\edu\odu\cs\cs350\App.java">
+        <Message>At App.java:[lines 15-101]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.App</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.App" name="checkIfDirectoryEmptyOrInvalid" signature="(Ljava/lang/String;)I" isStatic="true" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.App" start="57" end="80" startBytecode="0" endBytecode="43" sourcefile="App.java" sourcepath="edu/odu/cs/cs350/App.java" relSourcepath="java\edu\odu\cs\cs350\App.java"/>
+      <Message>In method edu.odu.cs.cs350.App.checkIfDirectoryEmptyOrInvalid(String)</Message>
+    </Method>
+    <LocalVariable name="file" register="1" pc="9" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named file</Message>
+    </LocalVariable>
+    <SourceLine classname="edu.odu.cs.cs350.App" primary="true" start="57" end="57" startBytecode="8" endBytecode="8" sourcefile="App.java" sourcepath="edu/odu/cs/cs350/App.java" relSourcepath="java\edu\odu\cs\cs350\App.java">
+      <Message>At App.java:[line 57]</Message>
+    </SourceLine>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.DEAD_OBJECT_STORE" value="true"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.LOCAL_NAME" value="file"/>
+    <Property name="edu.umd.cs.findbugs.detect.DeadLocalStoreProperty.METHOD_RESULT" value="true"/>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="5436b8557c28cd575e7920be7f09a44" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: edu.odu.cs.cs350.CSS.classification</LongMessage>
+    <Class classname="edu.odu.cs.cs350.CSS" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.CSS" start="19" end="27" sourcefile="CSS.java" sourcepath="edu/odu/cs/cs350/CSS.java" relSourcepath="java\edu\odu\cs\cs350\CSS.java">
+        <Message>At CSS.java:[lines 19-27]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.CSS</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.CSS" name="classification" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.CSS" sourcefile="CSS.java" sourcepath="edu/odu/cs/cs350/CSS.java" relSourcepath="java\edu\odu\cs\cs350\CSS.java">
+        <Message>In CSS.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.CSS.classification</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.CSS" primary="true" start="22" end="22" startBytecode="16" endBytecode="16" sourcefile="CSS.java" sourcepath="edu/odu/cs/cs350/CSS.java" relSourcepath="java\edu\odu\cs\cs350\CSS.java">
+      <Message>At CSS.java:[line 22]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="de5b07a2b17d49add8c7bc84749f6b28" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: edu.odu.cs.cs350.CSS.uri</LongMessage>
+    <Class classname="edu.odu.cs.cs350.CSS" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.CSS" start="19" end="27" sourcefile="CSS.java" sourcepath="edu/odu/cs/cs350/CSS.java" relSourcepath="java\edu\odu\cs\cs350\CSS.java">
+        <Message>At CSS.java:[lines 19-27]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.CSS</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.CSS" name="uri" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.CSS" sourcefile="CSS.java" sourcepath="edu/odu/cs/cs350/CSS.java" relSourcepath="java\edu\odu\cs\cs350\CSS.java">
+        <Message>In CSS.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.CSS.uri</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.CSS" primary="true" start="24" end="24" startBytecode="28" endBytecode="28" sourcefile="CSS.java" sourcepath="edu/odu/cs/cs350/CSS.java" relSourcepath="java\edu\odu\cs\cs350\CSS.java">
+      <Message>At CSS.java:[line 24]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="cfb64b58923c105f23cdac9c85785089" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.CSS.references</LongMessage>
+    <Class classname="edu.odu.cs.cs350.CSS" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.CSS" start="19" end="27" sourcefile="CSS.java" sourcepath="edu/odu/cs/cs350/CSS.java" relSourcepath="java\edu\odu\cs\cs350\CSS.java">
+        <Message>At CSS.java:[lines 19-27]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.CSS</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.CSS" name="references" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.CSS" sourcefile="CSS.java" sourcepath="edu/odu/cs/cs350/CSS.java" relSourcepath="java\edu\odu\cs\cs350\CSS.java" synthetic="true">
+        <Message>In CSS.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.CSS.references</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.CSS" sourcefile="CSS.java" sourcepath="edu/odu/cs/cs350/CSS.java" relSourcepath="java\edu\odu\cs\cs350\CSS.java" synthetic="true">
+      <Message>In CSS.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UC_USELESS_OBJECT" priority="2" rank="17" abbrev="UC" category="STYLE" instanceHash="7302c455244d4d588fb22c5acd198709" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Useless object created</ShortMessage>
+    <LongMessage>Useless object stored in variable webSiteData of method edu.odu.cs.cs350.Excel.output()</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Excel" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Excel" start="20" end="77" sourcefile="Excel.java" sourcepath="edu/odu/cs/cs350/Excel.java" relSourcepath="java\edu\odu\cs\cs350\Excel.java">
+        <Message>At Excel.java:[lines 20-77]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Excel</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.Excel" name="output" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Excel" start="30" end="70" startBytecode="0" endBytecode="883" sourcefile="Excel.java" sourcepath="edu/odu/cs/cs350/Excel.java" relSourcepath="java\edu\odu\cs\cs350\Excel.java"/>
+      <Message>In method edu.odu.cs.cs350.Excel.output()</Message>
+    </Method>
+    <String value="webSiteData">
+      <Message>Value webSiteData</Message>
+    </String>
+    <Type descriptor="Ljava/util/TreeMap;">
+      <SourceLine classname="java.util.TreeMap" start="130" end="2961" sourcefile="TreeMap.java" sourcepath="java/util/TreeMap.java">
+        <Message>At TreeMap.java:[lines 130-2961]</Message>
+      </SourceLine>
+      <Message>Type java.util.TreeMap</Message>
+    </Type>
+    <SourceLine classname="edu.odu.cs.cs350.Excel" primary="true" start="44" end="44" startBytecode="49" endBytecode="49" sourcefile="Excel.java" sourcepath="edu/odu/cs/cs350/Excel.java" relSourcepath="java\edu\odu\cs\cs350\Excel.java">
+      <Message>At Excel.java:[line 44]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="ed79909078b7fa6d9dce77ce7de13113" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Excel.filename</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Excel" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Excel" start="20" end="77" sourcefile="Excel.java" sourcepath="edu/odu/cs/cs350/Excel.java" relSourcepath="java\edu\odu\cs\cs350\Excel.java">
+        <Message>At Excel.java:[lines 20-77]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Excel</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Excel" name="filename" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Excel" sourcefile="Excel.java" sourcepath="edu/odu/cs/cs350/Excel.java" relSourcepath="java\edu\odu\cs\cs350\Excel.java" synthetic="true">
+        <Message>In Excel.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Excel.filename</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Excel" sourcefile="Excel.java" sourcepath="edu/odu/cs/cs350/Excel.java" relSourcepath="java\edu\odu\cs\cs350\Excel.java" synthetic="true">
+      <Message>In Excel.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="f14d01b4f90d4d48c8e796f0a9e7766a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: edu.odu.cs.cs350.Image.classification</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Image" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Image" start="15" end="23" sourcefile="Image.java" sourcepath="edu/odu/cs/cs350/Image.java" relSourcepath="java\edu\odu\cs\cs350\Image.java">
+        <Message>At Image.java:[lines 15-23]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Image</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Image" name="classification" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Image" sourcefile="Image.java" sourcepath="edu/odu/cs/cs350/Image.java" relSourcepath="java\edu\odu\cs\cs350\Image.java">
+        <Message>In Image.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Image.classification</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Image" primary="true" start="18" end="18" startBytecode="16" endBytecode="16" sourcefile="Image.java" sourcepath="edu/odu/cs/cs350/Image.java" relSourcepath="java\edu\odu\cs\cs350\Image.java">
+      <Message>At Image.java:[line 18]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="7c9e297a8fe2ca711b22f3be44c7953c" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: edu.odu.cs.cs350.Image.uri</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Image" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Image" start="15" end="23" sourcefile="Image.java" sourcepath="edu/odu/cs/cs350/Image.java" relSourcepath="java\edu\odu\cs\cs350\Image.java">
+        <Message>At Image.java:[lines 15-23]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Image</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Image" name="uri" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Image" sourcefile="Image.java" sourcepath="edu/odu/cs/cs350/Image.java" relSourcepath="java\edu\odu\cs\cs350\Image.java">
+        <Message>In Image.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Image.uri</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Image" primary="true" start="20" end="20" startBytecode="28" endBytecode="28" sourcefile="Image.java" sourcepath="edu/odu/cs/cs350/Image.java" relSourcepath="java\edu\odu\cs\cs350\Image.java">
+      <Message>At Image.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="24726067ceadf44553a90a6526bfe9b9" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Image.references</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Image" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Image" start="15" end="23" sourcefile="Image.java" sourcepath="edu/odu/cs/cs350/Image.java" relSourcepath="java\edu\odu\cs\cs350\Image.java">
+        <Message>At Image.java:[lines 15-23]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Image</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Image" name="references" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Image" sourcefile="Image.java" sourcepath="edu/odu/cs/cs350/Image.java" relSourcepath="java\edu\odu\cs\cs350\Image.java" synthetic="true">
+        <Message>In Image.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Image.references</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Image" sourcefile="Image.java" sourcepath="edu/odu/cs/cs350/Image.java" relSourcepath="java\edu\odu\cs\cs350\Image.java" synthetic="true">
+      <Message>In Image.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="86b10b956c2503a6907434f8a9921ccc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in edu.odu.cs.cs350.JSON.output(): new java.io.FileWriter(String)</LongMessage>
+    <Class classname="edu.odu.cs.cs350.JSON" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.JSON" start="10" end="37" sourcefile="JSON.java" sourcepath="edu/odu/cs/cs350/JSON.java" relSourcepath="java\edu\odu\cs\cs350\JSON.java">
+        <Message>At JSON.java:[lines 10-37]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.JSON</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.JSON" name="output" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.JSON" start="22" end="37" startBytecode="0" endBytecode="220" sourcefile="JSON.java" sourcepath="edu/odu/cs/cs350/JSON.java" relSourcepath="java\edu\odu\cs\cs350\JSON.java"/>
+      <Message>In method edu.odu.cs.cs350.JSON.output()</Message>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="67" end="68" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+      <Message>Called method new java.io.FileWriter(String)</Message>
+    </Method>
+    <SourceLine classname="edu.odu.cs.cs350.JSON" primary="true" start="28" end="28" startBytecode="38" endBytecode="38" sourcefile="JSON.java" sourcepath="edu/odu/cs/cs350/JSON.java" relSourcepath="java\edu\odu\cs\cs350\JSON.java">
+      <Message>At JSON.java:[line 28]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="eb87b1b75c83f92a79612dd71943c124" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: edu.odu.cs.cs350.JavaScript.classification</LongMessage>
+    <Class classname="edu.odu.cs.cs350.JavaScript" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.JavaScript" start="18" end="26" sourcefile="JavaScript.java" sourcepath="edu/odu/cs/cs350/JavaScript.java" relSourcepath="java\edu\odu\cs\cs350\JavaScript.java">
+        <Message>At JavaScript.java:[lines 18-26]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.JavaScript</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.JavaScript" name="classification" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.JavaScript" sourcefile="JavaScript.java" sourcepath="edu/odu/cs/cs350/JavaScript.java" relSourcepath="java\edu\odu\cs\cs350\JavaScript.java">
+        <Message>In JavaScript.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.JavaScript.classification</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.JavaScript" primary="true" start="21" end="21" startBytecode="16" endBytecode="16" sourcefile="JavaScript.java" sourcepath="edu/odu/cs/cs350/JavaScript.java" relSourcepath="java\edu\odu\cs\cs350\JavaScript.java">
+      <Message>At JavaScript.java:[line 21]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="ba24235e0d40d6599ab081d192666d55" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: edu.odu.cs.cs350.JavaScript.uri</LongMessage>
+    <Class classname="edu.odu.cs.cs350.JavaScript" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.JavaScript" start="18" end="26" sourcefile="JavaScript.java" sourcepath="edu/odu/cs/cs350/JavaScript.java" relSourcepath="java\edu\odu\cs\cs350\JavaScript.java">
+        <Message>At JavaScript.java:[lines 18-26]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.JavaScript</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.JavaScript" name="uri" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.JavaScript" sourcefile="JavaScript.java" sourcepath="edu/odu/cs/cs350/JavaScript.java" relSourcepath="java\edu\odu\cs\cs350\JavaScript.java">
+        <Message>In JavaScript.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.JavaScript.uri</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.JavaScript" primary="true" start="23" end="23" startBytecode="28" endBytecode="28" sourcefile="JavaScript.java" sourcepath="edu/odu/cs/cs350/JavaScript.java" relSourcepath="java\edu\odu\cs\cs350\JavaScript.java">
+      <Message>At JavaScript.java:[line 23]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="e9f45f4630885eaa47d7efca9b66bca0" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.JavaScript.references</LongMessage>
+    <Class classname="edu.odu.cs.cs350.JavaScript" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.JavaScript" start="18" end="26" sourcefile="JavaScript.java" sourcepath="edu/odu/cs/cs350/JavaScript.java" relSourcepath="java\edu\odu\cs\cs350\JavaScript.java">
+        <Message>At JavaScript.java:[lines 18-26]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.JavaScript</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.JavaScript" name="references" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.JavaScript" sourcefile="JavaScript.java" sourcepath="edu/odu/cs/cs350/JavaScript.java" relSourcepath="java\edu\odu\cs\cs350\JavaScript.java" synthetic="true">
+        <Message>In JavaScript.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.JavaScript.references</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.JavaScript" sourcefile="JavaScript.java" sourcepath="edu/odu/cs/cs350/JavaScript.java" relSourcepath="java\edu\odu\cs\cs350\JavaScript.java" synthetic="true">
+      <Message>In JavaScript.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="754490601f4d0814cd3812638aac9f77" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: edu.odu.cs.cs350.OtherFile.path</LongMessage>
+    <Class classname="edu.odu.cs.cs350.OtherFile" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.OtherFile" start="17" end="25" sourcefile="OtherFile.java" sourcepath="edu/odu/cs/cs350/OtherFile.java" relSourcepath="java\edu\odu\cs\cs350\OtherFile.java">
+        <Message>At OtherFile.java:[lines 17-25]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.OtherFile</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.OtherFile" name="path" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.OtherFile" sourcefile="OtherFile.java" sourcepath="edu/odu/cs/cs350/OtherFile.java" relSourcepath="java\edu\odu\cs\cs350\OtherFile.java">
+        <Message>In OtherFile.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.OtherFile.path</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.OtherFile" primary="true" start="22" end="22" startBytecode="28" endBytecode="28" sourcefile="OtherFile.java" sourcepath="edu/odu/cs/cs350/OtherFile.java" relSourcepath="java\edu\odu\cs\cs350\OtherFile.java">
+      <Message>At OtherFile.java:[line 22]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_CLASS_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="51af86651ea52938691103717524a2c1" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class names should start with an upper case letter</ShortMessage>
+    <LongMessage>The class name edu.odu.cs.cs350.OtherFile$fileType doesn&apos;t start with an upper case letter</LongMessage>
+    <Class classname="edu.odu.cs.cs350.OtherFile$fileType" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.OtherFile$fileType" start="7" end="7" sourcefile="OtherFile.java" sourcepath="edu/odu/cs/cs350/OtherFile.java" relSourcepath="java\edu\odu\cs\cs350\OtherFile.java" synthetic="true">
+        <Message>At OtherFile.java:[line 7]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.OtherFile$fileType</Message>
+    </Class>
+    <SourceLine classname="edu.odu.cs.cs350.OtherFile$fileType" start="7" end="7" sourcefile="OtherFile.java" sourcepath="edu/odu/cs/cs350/OtherFile.java" relSourcepath="java\edu\odu\cs\cs350\OtherFile.java" synthetic="true">
+      <Message>At OtherFile.java:[line 7]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="5a8087ee8de993ce8dae3912912a6fdc" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: edu.odu.cs.cs350.Page.path</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Page" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" start="26" end="91" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java">
+        <Message>At Page.java:[lines 26-91]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Page</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Page" name="path" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java">
+        <Message>In Page.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Page.path</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Page" primary="true" start="30" end="30" startBytecode="22" endBytecode="22" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java">
+      <Message>At Page.java:[line 30]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="410b8f4c1ec7ac065d7fd993be26b3ad" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Page.css</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Page" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" start="26" end="91" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java">
+        <Message>At Page.java:[lines 26-91]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Page</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Page" name="css" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java" synthetic="true">
+        <Message>In Page.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Page.css</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Page" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java" synthetic="true">
+      <Message>In Page.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="2a9d1bd4d047e9a16c660cc36b8d402a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Page.images</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Page" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" start="26" end="91" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java">
+        <Message>At Page.java:[lines 26-91]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Page</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Page" name="images" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java" synthetic="true">
+        <Message>In Page.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Page.images</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Page" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java" synthetic="true">
+      <Message>In Page.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="d423f7ffc694d898dc4be221caee41e7" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Page.javascript</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Page" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" start="26" end="91" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java">
+        <Message>At Page.java:[lines 26-91]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Page</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Page" name="javascript" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java" synthetic="true">
+        <Message>In Page.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Page.javascript</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Page" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java" synthetic="true">
+      <Message>In Page.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="bce3e79cb9160576fc35a23906eb1e1f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Page.links</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Page" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" start="26" end="91" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java">
+        <Message>At Page.java:[lines 26-91]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Page</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Page" name="links" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Page" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java" synthetic="true">
+        <Message>In Page.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Page.links</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Page" sourcefile="Page.java" sourcepath="edu/odu/cs/cs350/Page.java" relSourcepath="java\edu\odu\cs\cs350\Page.java" synthetic="true">
+      <Message>In Page.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="cc0720cd2d47a31cc552372cd0ab085e" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in edu.odu.cs.cs350.Text.output(): new java.io.FileWriter(String)</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Text" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Text" start="17" end="43" sourcefile="Text.java" sourcepath="edu/odu/cs/cs350/Text.java" relSourcepath="java\edu\odu\cs\cs350\Text.java">
+        <Message>At Text.java:[lines 17-43]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Text</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.Text" name="output" signature="()Ljava/lang/String;" isStatic="true" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Text" start="30" end="43" startBytecode="0" endBytecode="223" sourcefile="Text.java" sourcepath="edu/odu/cs/cs350/Text.java" relSourcepath="java\edu\odu\cs\cs350\Text.java"/>
+      <Message>In method edu.odu.cs.cs350.Text.output()</Message>
+    </Method>
+    <Method classname="java.io.FileWriter" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.io.FileWriter" start="67" end="68" startBytecode="0" endBytecode="68" sourcefile="FileWriter.java" sourcepath="java/io/FileWriter.java"/>
+      <Message>Called method new java.io.FileWriter(String)</Message>
+    </Method>
+    <SourceLine classname="edu.odu.cs.cs350.Text" primary="true" start="36" end="36" startBytecode="45" endBytecode="45" sourcefile="Text.java" sourcepath="edu/odu/cs/cs350/Text.java" relSourcepath="java\edu\odu\cs\cs350\Text.java">
+      <Message>At Text.java:[line 36]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="189fe861619db32045c5edd0331d7ea8" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Text.filename</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Text" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Text" start="17" end="43" sourcefile="Text.java" sourcepath="edu/odu/cs/cs350/Text.java" relSourcepath="java\edu\odu\cs\cs350\Text.java">
+        <Message>At Text.java:[lines 17-43]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Text</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Text" name="filename" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Text" sourcefile="Text.java" sourcepath="edu/odu/cs/cs350/Text.java" relSourcepath="java\edu\odu\cs\cs350\Text.java" synthetic="true">
+        <Message>In Text.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Text.filename</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Text" sourcefile="Text.java" sourcepath="edu/odu/cs/cs350/Text.java" relSourcepath="java\edu\odu\cs\cs350\Text.java" synthetic="true">
+      <Message>In Text.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NM_METHOD_NAMING_CONVENTION" priority="2" rank="16" abbrev="Nm" category="BAD_PRACTICE" instanceHash="592112db4d234186c1ec7bea425a537f" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Method names should start with a lower case letter</ShortMessage>
+    <LongMessage>The method name edu.odu.cs.cs350.Website.Translator() doesn&apos;t start with a lower case letter</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Website" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="18" end="192" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+        <Message>At Website.java:[lines 18-192]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Website</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.Website" name="Translator" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="134" end="134" startBytecode="0" endBytecode="42" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" synthetic="true"/>
+      <Message>In method edu.odu.cs.cs350.Website.Translator()</Message>
+    </Method>
+    <SourceLine classname="edu.odu.cs.cs350.Website" start="134" end="134" startBytecode="0" endBytecode="42" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" synthetic="true">
+      <Message>At Website.java:[line 134]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" priority="2" rank="13" abbrev="NP" category="STYLE" instanceHash="5345b47850feba02d13b51d2008fae88" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="476">
+    <ShortMessage>Possible null pointer dereference due to return value of called method</ShortMessage>
+    <LongMessage>Possible null pointer dereference in edu.odu.cs.cs350.Website.listFile(File, Collection, Collection, Collection, Collection) due to return value of called method</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Website" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="18" end="192" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+        <Message>At Website.java:[lines 18-192]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Website</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.Website" name="listFile" signature="(Ljava/io/File;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;)V" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="54" end="73" startBytecode="0" endBytecode="436" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java"/>
+      <Message>In method edu.odu.cs.cs350.Website.listFile(File, Collection, Collection, Collection, Collection)</Message>
+    </Method>
+    <LocalVariable name="?" register="-1" pc="107" role="LOCAL_VARIABLE_UNKNOWN">
+      <Message>Local variable stored in JVM register ?</Message>
+    </LocalVariable>
+    <SourceLine classname="edu.odu.cs.cs350.Website" primary="true" start="64" end="64" startBytecode="107" endBytecode="107" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" role="SOURCE_LINE_INVOKED">
+      <Message>Method invoked at Website.java:[line 64]</Message>
+    </SourceLine>
+    <SourceLine classname="edu.odu.cs.cs350.Website" start="64" end="64" startBytecode="94" endBytecode="94" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" role="SOURCE_LINE_KNOWN_NULL">
+      <Message>Known null at Website.java:[line 64]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SF_SWITCH_NO_DEFAULT" priority="2" rank="19" abbrev="SF" category="STYLE" instanceHash="6bf454c648464493b95254550ea187df" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Switch statement found where default case is missing</ShortMessage>
+    <LongMessage>Switch statement found in edu.odu.cs.cs350.Website.sort(String, File, Collection, Collection, Collection, Collection, long) where default case is missing</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Website" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="18" end="192" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+        <Message>At Website.java:[lines 18-192]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Website</Message>
+    </Class>
+    <Method classname="edu.odu.cs.cs350.Website" name="sort" signature="(Ljava/lang/String;Ljava/io/File;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;Ljava/util/Collection;J)V" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="76" end="131" startBytecode="0" endBytecode="1159" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java"/>
+      <Message>In method edu.odu.cs.cs350.Website.sort(String, File, Collection, Collection, Collection, Collection, long)</Message>
+    </Method>
+    <SourceLine classname="edu.odu.cs.cs350.Website" primary="true" start="77" end="127" startBytecode="271" endBytecode="788" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+      <Message>At Website.java:[lines 77-127]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="URF_UNREAD_FIELD" priority="2" rank="18" abbrev="UrF" category="PERFORMANCE" instanceHash="a7e0d4b758f57fffce07748a037c195a" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unread field</ShortMessage>
+    <LongMessage>Unread field: edu.odu.cs.cs350.Website.Output</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Website" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="18" end="192" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+        <Message>At Website.java:[lines 18-192]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Website</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Website" name="Output" signature="Ledu/odu/cs/cs350/OutputPackager;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+        <Message>In Website.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Website.Output</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Website" primary="true" start="163" end="163" startBytecode="107" endBytecode="107" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+      <Message>At Website.java:[line 163]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="bede6e8eafc3664c9f44f031d4887416" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Website.baseURLs</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Website" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="18" end="192" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+        <Message>At Website.java:[lines 18-192]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Website</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Website" name="baseURLs" signature="Ljava/util/Collection;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" synthetic="true">
+        <Message>In Website.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Website.baseURLs</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Website" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" synthetic="true">
+      <Message>In Website.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="964d7358c885a59b6daa926ac88511c5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Website.name</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Website" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="18" end="192" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+        <Message>At Website.java:[lines 18-192]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Website</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Website" name="name" signature="Ljava/lang/String;" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" synthetic="true">
+        <Message>In Website.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Website.name</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Website" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" synthetic="true">
+      <Message>In Website.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="UUF_UNUSED_FIELD" priority="2" rank="18" abbrev="UuF" category="PERFORMANCE" instanceHash="b0a8e7fce4454a25eb6b8dc094feeac5" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Unused field</ShortMessage>
+    <LongMessage>Unused field: edu.odu.cs.cs350.Website.totalSize</LongMessage>
+    <Class classname="edu.odu.cs.cs350.Website" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" start="18" end="192" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java">
+        <Message>At Website.java:[lines 18-192]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.cs350.Website</Message>
+    </Class>
+    <Field classname="edu.odu.cs.cs350.Website" name="totalSize" signature="I" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.cs350.Website" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" synthetic="true">
+        <Message>In Website.java</Message>
+      </SourceLine>
+      <Message>Field edu.odu.cs.cs350.Website.totalSize</Message>
+    </Field>
+    <SourceLine classname="edu.odu.cs.cs350.Website" sourcefile="Website.java" sourcepath="edu/odu/cs/cs350/Website.java" relSourcepath="java\edu\odu\cs\cs350\Website.java" synthetic="true">
+      <Message>In Website.java</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="PERFORMANCE">
+    <Description>Performance</Description>
+  </BugCategory>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="DLS_DEAD_LOCAL_STORE" abbrev="DLS" category="STYLE">
+    <ShortDescription>Dead store to local variable</ShortDescription>
+    <Details><![CDATA[
+
+<p>
+This instruction assigns a value to a local variable,
+but the value is not read or used in any subsequent instruction.
+Often, this indicates an error, because the value computed is never
+used.
+</p>
+<p>
+Note that Sun's javac compiler often generates dead stores for
+final local variables. Because SpotBugs is a bytecode-based tool,
+there is no easy way to eliminate these false positives.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_CLASS_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Class names should start with an upper case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Class names should be nouns, in mixed case with the first letter of each internal word capitalized. Try to keep your class names simple and descriptive. Use whole words-avoid acronyms and abbreviations (unless the abbreviation is much more widely used than the long form, such as URL or HTML).
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="UUF_UNUSED_FIELD" abbrev="UuF" category="PERFORMANCE">
+    <ShortDescription>Unused field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never used.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE" abbrev="NP" category="STYLE">
+    <ShortDescription>Possible null pointer dereference due to return value of called method</ShortDescription>
+    <Details><![CDATA[
+      
+<p> The return value from a method is dereferenced without a null check,
+and the return value of that method is one that should generally be checked
+for null.  This may lead to a <code>NullPointerException</code> when the code is executed.
+</p>
+      
+   ]]></Details>
+  </BugPattern>
+  <BugPattern type="UC_USELESS_OBJECT" abbrev="UC" category="STYLE">
+    <ShortDescription>Useless object created</ShortDescription>
+    <Details><![CDATA[
+
+<p>Our analysis shows that this object is useless.
+It's created and modified, but its value never go outside of the method or produce any side-effect.
+Either there is a mistake and object was intended to be used or it can be removed.</p>
+<p>This analysis rarely produces false-positives. Common false-positive cases include:</p>
+<p>- This object used to implicitly throw some obscure exception.</p>
+<p>- This object used as a stub to generalize the code.</p>
+<p>- This object used to hold strong references to weak/soft-referenced objects.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="NM_METHOD_NAMING_CONVENTION" abbrev="Nm" category="BAD_PRACTICE">
+    <ShortDescription>Method names should start with a lower case letter</ShortDescription>
+    <Details><![CDATA[
+
+  <p>
+Methods should be verbs, in mixed case with the first letter lowercase, with the first letter of each internal word capitalized.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DCN_NULLPOINTER_EXCEPTION" abbrev="DCN" category="STYLE">
+    <ShortDescription>NullPointerException caught</ShortDescription>
+    <Details><![CDATA[
+   
+<p>
+According to SEI Cert rule <a href="https://wiki.sei.cmu.edu/confluence/display/java/ERR08-J.+Do+not+catch+NullPointerException+or+any+of+its+ancestors">ERR08-J</a> NullPointerException should not be caught. Handling NullPointerException is considered an inferior alternative to null-checking.
+<p>
+This non-compliant code catches a NullPointerException to see if an incoming parameter is null:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+  try {
+    String ms[] = m.split(" ");
+    return names.length != 1;
+  } catch (NullPointerException e) {
+    return false;
+  }
+}
+</code></pre>
+<p>
+A compliant solution would use a null-check as in the following example:
+</p>
+<pre><code>
+boolean hasSpace(String m) {
+    if (m == null) return false;
+    String ms[] = m.split(" ");
+    return names.length != 1;
+}
+</code></pre>
+    
+     ]]></Details>
+  </BugPattern>
+  <BugPattern type="URF_UNREAD_FIELD" abbrev="UrF" category="PERFORMANCE">
+    <ShortDescription>Unread field</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This field is never read.&nbsp; Consider removing it from the class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="SF_SWITCH_NO_DEFAULT" abbrev="SF" category="STYLE">
+    <ShortDescription>Switch statement found where default case is missing</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This method contains a switch statement where default case is missing.
+  Usually you need to provide a default case.</p>
+  <p>Because the analysis only looks at the generated bytecode, this warning can be incorrect triggered if
+the default case is at the end of the switch statement and the switch statement doesn't contain break statements for other
+cases.
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="NP" cweid="476">
+    <Description>Null pointer dereference</Description>
+  </BugCode>
+  <BugCode abbrev="SF">
+    <Description>Switch case falls through</Description>
+  </BugCode>
+  <BugCode abbrev="UuF">
+    <Description>Unused field</Description>
+  </BugCode>
+  <BugCode abbrev="UrF">
+    <Description>Unread field</Description>
+  </BugCode>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="DLS" cweid="563">
+    <Description>Dead local store</Description>
+  </BugCode>
+  <BugCode abbrev="DCN">
+    <Description>Don&apos;t Catch NullPointer Exception</Description>
+  </BugCode>
+  <BugCode abbrev="UC">
+    <Description>Useless code</Description>
+  </BugCode>
+  <BugCode abbrev="Nm">
+    <Description>Confusing method name</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 1 Aug 2022 12:51:05 -0400" total_classes="0" referenced_classes="0" total_bugs="30" total_size="0" num_packages="1" java_version="18.0.1" vm_version="18.0.1+10" cpu_seconds="16.84" clock_seconds="5.14" peak_mbytes="179.80" alloc_mbytes="1886.00" gc_seconds="0.09" priority_2="27" priority_1="3">
+    <FileStats path="edu/odu/cs/cs350/App.java" bugCount="2" size="0" bugHash="e2a12a518c176ffe9b4672e6e119d388"/>
+    <FileStats path="edu/odu/cs/cs350/CSS.java" bugCount="3" size="0" bugHash="605a315ec15d547d19d31a67787e4c1c"/>
+    <FileStats path="edu/odu/cs/cs350/Excel.java" bugCount="2" size="0" bugHash="8f6aed1c134cfa05e07eeacc833e9aa2"/>
+    <FileStats path="edu/odu/cs/cs350/Image.java" bugCount="3" size="0" bugHash="9962cc8320b6bc758df0ea1f5d2f47f0"/>
+    <FileStats path="edu/odu/cs/cs350/JSON.java" bugCount="1" size="0" bugHash="8168d9a2e9e4abef6f7b81c3434f814b"/>
+    <FileStats path="edu/odu/cs/cs350/JavaScript.java" bugCount="3" size="0" bugHash="ffd8cf69ae6f458d2aa3bb97a45fcffa"/>
+    <FileStats path="edu/odu/cs/cs350/OtherFile.java" bugCount="2" size="0" bugHash="80a5bc6f01f71ebfa572e98bf70e83fa"/>
+    <FileStats path="edu/odu/cs/cs350/Page.java" bugCount="5" size="0" bugHash="39b18f9fdc8979d247eb6ff54c7b7516"/>
+    <FileStats path="edu/odu/cs/cs350/Text.java" bugCount="2" size="0" bugHash="85f57259efabc10af52ff1fbf835fd0b"/>
+    <FileStats path="edu/odu/cs/cs350/Website.java" bugCount="7" size="0" bugHash="4d8318a14a00a53eda37ed32d72d7bc3"/>
+    <FindBugsProfile></FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
