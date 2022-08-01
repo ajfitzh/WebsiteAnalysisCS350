@@ -1,0 +1,2 @@
+INDEX VERSION 1.131+C:\Users\austi\Desktop\WebsiteAnalysisCS350\.metadata\.plugins\org.eclipse.jdt.core
+3149475404.index
