@@ -18,6 +18,9 @@ plugins {
 	id "com.github.spotbugs" version "5.0.9"
 
 	id 'checkstyle'
+
+	//connect to git functionality
+	id "org.xbib.gradle.plugin.git" version "2.0.0"
 }
 
 java {
@@ -146,5 +149,52 @@ tasks.withType(Checkstyle) {
 
 checkstyleTest {
     enabled = false
+}
+
+///Building the Reports Website
+task reports{
+	//ensure test and javadoc files have been executed
+	test.ignoreFailures=true
+	//check.dependsOn test and javadoc files 
+
+}
+task deployReports {
+	//guarantee reports task has been run
+	check.dependsOn reports
+	//copy the build/docs directory and contents to docs/ directory in gh-pages branch
+	task copyBuildDocs ( type: Copy) {
+		from 'build/docs'
+		into 'docs' //how do add gh-pages branch?
+	}
+	//copy the build/reports directory and contents to reports/ directory in gh-pages branch
+		task copyBuildReports ( type: Copy) {
+		from 'build/reports'
+		into 'reports/' //how do add gh-pages branch?
+	}
+	
+	//commit all the changes to gh-pages branch
+}
+
+///Website Publication on github pages
+
+task clonePages(){
+	doLast {
+		mkdir 'build/gh-pages'
+		def thisRepo = rootProject.projectDir.toString()
+		def pagesDir = "$buildDir/gh-pages"
+		project.delete {
+			delete pagesDir
+		}
+		def grgit = git.clone {
+			dir = pagesDir
+			uri = 'file:' + thisRepo
+			bare = false
+			refToCheckout = 'gh-pages'
+		}
+		grgit.checkout {
+			branch = 'gh-pages'
+		}
+		grgit.close()
+	}
 }
 
