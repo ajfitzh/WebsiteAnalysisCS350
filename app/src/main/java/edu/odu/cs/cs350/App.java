@@ -39,7 +39,7 @@ public class App {
         
         website.listAllNodes();
         //Test call of Output Packager triggering all output functions
-        OutputPackager.callOutput();
+        OutputPackager.callOutput(website);
     }
 
     
