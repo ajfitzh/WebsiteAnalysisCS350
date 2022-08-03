@@ -7,3 +7,4 @@ Group 5
 *[SpotBugs](./reports/spotbugs/main.html)
 *[pmd](./reports/pmd/main.html)
 *[checkstyle](./reports/checkstyle/main.html)
+<script src="https://code.highcharts.com/highcharts.js"></script>
