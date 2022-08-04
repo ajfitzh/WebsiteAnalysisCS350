@@ -7,7 +7,7 @@ import java.text.Format;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/**
+/**stores information of JSON files
  * @author jdoug
  *
  */
@@ -20,7 +20,7 @@ public class JSON {
 	//string for filename, must have the format YYYMMDD-hhmmss-summary.json
 
 	
-	/** finds json files and returns date and time of file
+	/**finds json files and returns date and time of file
 	 * @return 
 	 */
 	public static String output() {
