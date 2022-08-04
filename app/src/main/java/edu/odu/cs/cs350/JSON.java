@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @author austi
+ * @author jdoug
  *
  */
 public class JSON {
@@ -21,7 +21,7 @@ public class JSON {
 
 	
 	/**
-	 * @return
+	 * @return data and time of json file
 	 */
 	public static String output() {
 			//Find date
