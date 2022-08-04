@@ -17,13 +17,21 @@ import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 
+/** Excel class for preparing and outputting Excel sheet displaying analysis information. This class is called by OutputPackager and retrieves info from Website, Pages, and others in order to output a .xlsx file
+ * @author austi
+ *
+ */
 public class Excel {
-	//This class is called by OutputPackager and retrieves info from Website, Pages, and others
-	// in order to output a .xlsx file
 	//NEEDS: # of images/CSS style references, JS scripts, intra-page/external/internal links
-	//string for filename, must have format YYYMMDD-hhmmss-summary.xlsx
+
+	/** string for filename, must have format YYYMMDD-hhmmss-summary.xlsx
+	 * 
+	 */
 	String filename;
-	//output function for .xlsx file
+	/**output function for .xlsx file
+	 * @param website website class built by App passed in in order for Excel to parse current data
+	 * @return string of Excel sheet title
+	 */
 	public static String output(Website website) {
 	    String fileName = getFileName();
 		try(HSSFWorkbook workbook = new HSSFWorkbook()) {
@@ -85,7 +93,9 @@ public class Excel {
 	return fileName;
 	}
 
-	// Generate filename for .xlsx file
+	/** Generate filename for .xlsx file
+	 * @return filename string with current date
+	 */
 	public static String getFileName() {
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMddyyyy-hhmmss");
    		LocalDateTime now = LocalDateTime.now();

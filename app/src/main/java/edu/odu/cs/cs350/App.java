@@ -12,9 +12,22 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Arrays;
 
-public class App {
 
-    public static void main(String[] args) {
+
+/**App is the main class that gets everything done- reads the arguments, creates a website class, calls the analysis function, then calls the output function.
+ * @author austi
+ * 
+ * 
+ */
+
+public class App {
+/** main is the function that takes in the argument and calls the important analyze, output functions
+ * @author austi
+ * 
+ * @param dirName storing the name of the directory from args[0]
+ * 
+ */
+	public static void main(String[] args) {
     	int check = 0;
     	do {
     		
@@ -43,6 +56,12 @@ public class App {
     }
 
     
+    /** Checks to see if argument is provided
+     * @param args The arguments being passed into app, we are expecting only one string that directs us to a non-empty directory
+     * @author austi
+     * 
+     * @return
+     */
     static int isArgumentProvided(String[] args) {
     	if(args.length == 0) {
 			System.out.println("No Argument Provided- Please provide a valid directory!");
@@ -52,7 +71,13 @@ public class App {
 		
 	}
 
-
+ 
+	/** checks if the directory is empty or an invalid file path
+	 * @param dirName the title of the directory being passed into the app
+	 * @author austi
+	 * 
+	 * @return boolean, 0 if invalid file path, 1 if good file path
+	 */
 	static int checkIfDirectoryEmptyOrInvalid(String dirName) {
     	File file = new File(dirName);
     	Path path = Paths.get(dirName);
@@ -82,6 +107,12 @@ public class App {
 	}
 
 
+	/** checks if it is a valid file path
+	 * @param path
+	 * @author austi
+	 * Direct path to directory in string form
+	 * @return 0 if invalid, 1 if valid
+	 */
 	public static boolean isValidPath(String path) {
         try {
             Paths.get(path);
@@ -91,6 +122,11 @@ public class App {
         return true;
     }
     
+    /** Generates awesome greeting to user
+     * @author austi
+     * 
+     * @return greeting string
+     */
     public String getGreeting() {
     	String greeting = "        ________     ________\n"
     			+ "  . - ~|        |-^-|        |~ - .\n"
