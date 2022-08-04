@@ -1,11 +1,12 @@
 package edu.odu.cs.cs350;
 
+import java.util.Collection;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import java.io.File;
 
-public class JavaScriptTest {
-	@Test public void JavaScriptTest() {
+public class JavaScriptTest{
+    @Test public void JavaScriptNameTest() {
 		String path = "src/test/resources/BasicSite/Other";
 
 		File file = new File(path);
@@ -21,7 +22,7 @@ public class JavaScriptTest {
         for (JavaScript javascript: website.javascripts) {
         	if(javascript.id == 5)
         	{
-                string testName = javascript.name;
+                String testName = javascript.name;
         		assertEquals("HelloWorld",testName);
         	}
         }
