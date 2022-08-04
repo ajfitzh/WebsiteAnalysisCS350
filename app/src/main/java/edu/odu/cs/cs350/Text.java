@@ -23,18 +23,22 @@ import java.util.Date;
 import java.io.File;
 
 
+/** This class is called by OutputPackager and retrieves info from Website, Pages, and others in order to output a .txt file
+ * @author austi
+ *
+ */
 public class Text {
-	//This class is called by OutputPackager and retrieves info from Website, Pages, and others
-	// in order to output a .txt file
+	//
+	// 
 	
 	//NEEDS: list of all local pages (printed one line per page, sorted lexicographically)
 	//NEEDS: local path of page and file size of page
 	//NEEDS or CREATES: total size of all pages added together
 	//string for filename, must have format YYYMMDD-hhmmss-summary.xlsx
-	//output function for .txt file
-	/* *
-	 * @param website
-	 * @return
+
+	/** output function for .txt file
+	 * @param website Website class to pass in analysis results to output functions 
+	 * @return returns string fileName
 	 */
 	public static String output(Website website) {
 		//string for filename, must have format YYYMMDD-hhmmss-summary.txt
@@ -57,6 +61,9 @@ public class Text {
 
 	}			
 
+	/** retrieves file name according to current date and appends to .txt file
+	 * @return returns filename string 
+	 */
 	public static String getFileName(){
 		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMddyyyy-hhmmss");
 		LocalDateTime now = LocalDateTime.now();

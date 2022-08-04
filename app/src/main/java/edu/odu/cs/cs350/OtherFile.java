@@ -1,7 +1,7 @@
 package edu.odu.cs.cs350;
 
-/**
- * @author austi
+/** Class to hold relevant characteristics of each individual "Other" file, either Archive, Video, Audio, or Uncategorized files 
+ * 
  *
  */
 public class OtherFile {

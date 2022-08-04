@@ -100,12 +100,12 @@ public class Website {
 		new Website().listFolder(new File(args[0]), pages, images, csssheets, otherFiles);
 	}
 	
-/**
- * @param dir
- * @param pages
- * @param images
- * @param csssheets
- * @param otherFiles
+/** function to print all files
+ * @param dir directory to analyze in File format
+ * @param pages collection of pages to print / add to
+ * @param images  collection of images to print / add to
+ * @param csssheets collection of csssheets to print / add to
+ * @param otherFiles collection of otherFiles to print / add to
  */
 private void listFile(File dir, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles) {
 	File[] files = dir.listFiles();
@@ -128,15 +128,15 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 	}
 	}
 }
-	//Sorting function for analyzed files
-	/**
-	 * @param file
-	 * @param fileobject
-	 * @param pages
-	 * @param images
-	 * @param csssheets
-	 * @param otherFiles
-	 * @param tempFileSize
+
+	/** Sorting function for analyzed files
+	 * @param file filename
+	 * @param fileobject File Object for analysis plugins
+ * @param pages collection of pages to print / add to
+ * @param images  collection of images to print / add to
+ * @param csssheets collection of csssheets to print / add to
+ * @param otherFiles collection of otherFiles to print / add to
+	 * @param tempFileSize fileSize to pass through
 	 */
 	public void sort(String file, File fileobject, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles, long tempFileSize) {
 		String name = fileobject.getName();
@@ -195,22 +195,21 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 	}
 	
 	}
-	//Translator Strips URLS, examines duplicates, stops at website boundaries
-	// Examines HTML, discards default pages like Error 404
-	/**
+	
+	/** In-Progress: Translator Strips URLS, examines duplicates, stops at website boundaries-- Examines HTML, discards default pages like Error 404
 	 * 
 	 */
 	public void Translator() {}
 	
 	
 	
-	//listFolder function
-	/**
-	 * @param dir
-	 * @param pages
-	 * @param images
-	 * @param csssheets
-	 * @param otherFiles
+	//
+	/** listFolder function lists all subfolders within directory and aids in cataloguing it
+	 * @param dir directory file to be analyzed
+ * @param pages collection of pages to print / add to
+ * @param images  collection of images to print / add to
+ * @param csssheets collection of csssheets to print / add to
+ * @param otherFiles collection of otherFiles to print / add to
 	 */
 	void listFolder(File dir, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles) {
 		File[] subDirs = dir.listFiles(new FileFilter() {
@@ -235,13 +234,12 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 	}
 	
 	
-	//Create output packager to allow Website to call the Output function
-	/**
+	/** Create output packager to allow Website to call the Output function
 	 * 
 	 */
 	OutputPackager Output = new OutputPackager();
 
-	/**
+	/** Function to print all nodes to the console for testing purposes 
 	 * 
 	 */
 	public void listAllNodes() {
