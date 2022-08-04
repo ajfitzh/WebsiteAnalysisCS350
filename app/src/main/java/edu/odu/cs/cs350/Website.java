@@ -15,87 +15,82 @@ import org.jsoup.select.Elements;
 
 
 
-/**
+/** Website class to perform analysis of entire directory and store information in separate collections
  * @author austi
  *
  */
 public class Website {
-	//placeholders to temporarily count files
-	/**
+	/** placeholder html int to temporarily count files
 	 * 
 	 */
 	int htmlCounter = 1;
-	/**
+	/** placeholder css int to temporarily count files
 	 * 
 	 */
 	int cssCounter = 1;
-	/**
+	/** placeholder js int to temporarily count files
 	 * 
 	 */
 	int jsCounter = 1;
-	/**
+	/** placeholder image int to temporarily count files
 	 * 
 	 */
 	int imageryCounter = 1;
-	/**
+	/** placeholder archive int to temporarily count files
 	 * 
 	 */
 	int archivesCounter = 1;
-	/**
+	/** placeholder audio int to temporarily count files
 	 * 
 	 */
 	int audioCounter = 1;
-	/**
+	/** placeholder video int to temporarily count files
 	 * 
 	 */
 	int videosCounter = 1;
-	/**
+	/** placeholder uncategorized int to temporarily count files
 	 * 
 	 */
 	int uncategorizedCounter = 1;
 	
-	//ArrayList for storing items (Pages and other items) created by HTMLExtractor/Translator
-	/**
+	
+	/** ArrayList for storing items (Pages and other items) created by HTMLExtractor/Translator
 	 * 
 	 */
 	Collection<Page> pages = new ArrayList<Page>();
-	/**
+	/** collection of images
 	 * 
 	 */
 	Collection<Image> images = new ArrayList<Image>();
-	/**
+	/** collection of CSS sheets
 	 * 
 	 */
 	Collection<CSS> csssheets = new ArrayList<CSS>();
-	/**
+	/** collection of otherFiles
 	 * 
 	 */
 	Collection<OtherFile> otherFiles = new ArrayList<OtherFile>();
-	/**
+	/** collection of javascript
 	 * 
 	 */
 	Collection<JavaScript> javascripts = new ArrayList<JavaScript>();
-	
-	// totalSize might store size in MB, might take this out
-	/**
+
+	/** totalSize might store size in MB, might take this out
 	 * 
 	 */
 	int totalSize;
 	
-	//name of the website
-	/**
+	/** name of the website
 	 * 
 	 */
 	String name;
 	
-	//collection of pathnames called "BaseURLs"
-	/**
+	/**  collection of pathnames called "BaseURLs"
 	 * 
 	 */
 	Collection<String> baseURLs;
 
-	//The "starter" function that reads the user argument, input, and reports user errors and requests new entry
-	/**
+	/** The "starter" function that reads the user argument, input, and reports user errors and requests new entry
 	 * @param args
 	 */
 	public void prepareDirectory(String[] args) {
