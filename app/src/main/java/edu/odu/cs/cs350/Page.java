@@ -14,16 +14,38 @@ import java.io.DataInputStream;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
 
+/**
+ * @author austi
+ *
+ */
 public class Page {
 
 	//name of the webpage- maybe the header?
+	/**
+	 * 
+	 */
 	String name;
 	//unique ID number
+	/**
+	 * 
+	 */
 	int id;
 	//file size in KB
+	/**
+	 * 
+	 */
 	long fileSize;
 	//local pathname within website
+	/**
+	 * 
+	 */
 	String path;
+    /**
+     * @param name
+     * @param id
+     * @param fileSize
+     * @param path
+     */
     Page(String name, int id, long fileSize, String path){
         this.name =  name;
         this.id = id;
@@ -33,21 +55,45 @@ public class Page {
         htmlExtractor(path);
     }
 	//array holding unique ID's of all CSS scripts referenced by this page
+	/**
+	 * 
+	 */
 	Collection<CSS> css = new ArrayList<CSS>();;
 	//array holding unique ID's of all Javascript scripts referenced by this page
+	/**
+	 * 
+	 */
 	Collection<JavaScript> javascript = new ArrayList<JavaScript>();;
 	//Array holding unique ID's of all Images referenced by this page
+	/**
+	 * 
+	 */
 	Collection<Image> images = new ArrayList<Image>();;
 	//Array holding unique ID's of all Links referenced by this page
+	/**
+	 * 
+	 */
 	Collection<Link> links = new ArrayList<Link>();
 	// Number of intrapage, external and intersite links
+	/**
+	 * 
+	 */
 	int intraLinks = 0;
+	/**
+	 * 
+	 */
 	int externalLinks = 0;
+	/**
+	 * 
+	 */
 	int intersiteLinks = 0;
 
 	//HTML Extractor extracts anchor tags/links and classifies links as intra-page, intra-site, or external
 	//Extracts Image tags and classifies as internal/external images
 	//Extracts file size for each image, the URI for each image, and local pages on which it is referenced
+	/**
+	 * @param htmlfile
+	 */
 	public void htmlExtractor(String htmlfile) {
 		
 		int intrapageLinks = 0;

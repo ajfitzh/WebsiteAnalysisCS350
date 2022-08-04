@@ -14,6 +14,10 @@ import java.util.Date;
 import java.util.Locale;
 
 
+/**
+ * @author austi
+ *
+ */
 public class Text {
 	//This class is called by OutputPackager and retrieves info from Website, Pages, and others
 	// in order to output a .txt file
@@ -22,9 +26,16 @@ public class Text {
 	//NEEDS: local path of page and file size of page
 	//NEEDS or CREATES: total size of all pages added together
 	//string for filename, must have format YYYMMDD-hhmmss-summary.xlsx
+		/**
+		 * 
+		 */
 		String filename;
 
 	//output function for .txt file
+	/**
+	 * @param website
+	 * @return
+	 */
 	public static String output(Website website) {
 		//string for filename, must have format YYYMMDD-hhmmss-summary.txt
 		String fileName = null;
