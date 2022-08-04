@@ -6,9 +6,9 @@ package edu.odu.cs.cs350;
  */
 public class OtherFile {
 
-	//unique integer ID
+	
 		/**
-		 * 
+		 * unique integer ID
 		 */
 		int id;
 		/**
@@ -16,24 +16,24 @@ public class OtherFile {
 		 *
 		 */
 		public enum fileType {ARCHIVE, VIDEO, AUDIO, UNCATEGORIZED};
-		//string to hold name of the file
+		
 		/**
-		 * 
+		 * string to hold name of the file
 		 */
 		String name;
-		//integer to hold size of the file in kb
+		
 		/**
-		 * 
+		 * integer to hold size of the file in kb
 		 */
 		long fileSize;
-		//string to hold local path of this file
+		
 		/**
-		 * 
+		 * string to hold local path of this file
 		 */
 		String path;
-		//temporary since idk how to do enum
+		
 		/**
-		 * 
+		 * temporary since idk how to do enum
 		 */
 		String typetest;
 		
