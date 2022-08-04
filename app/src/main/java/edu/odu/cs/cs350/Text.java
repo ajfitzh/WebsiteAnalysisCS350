@@ -25,9 +25,15 @@ public class Text {
 		String filename;
 
 	//output function for .txt file
-	public static String output() {
+	public static String output(Website website) {
 		//string for filename, must have format YYYMMDD-hhmmss-summary.txt
 		String fileName = null;
+		System.out.println("------------------------------------------------------- in Text.output() .... for each Page in website.Pages");
+		for (Page page: website.pages) {
+            
+        
+		System.out.println("---------------------------------------------------------------This page has this name: " + page.name);
+		}
 		try {
 		    // displaying date
 		    Format f = new SimpleDateFormat("MMddyyyy-hhmmss");

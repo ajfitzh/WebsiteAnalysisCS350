@@ -25,10 +25,11 @@ public class TextTest {
 @Test public void TextOutputStructure() {
 
     String fileName = null;
+    Website website = new Website();
     Format f = new SimpleDateFormat("MMddyyyy-hhmmss");
     String date = f.format(new Date());
     fileName = date+"-summary.txt";
-    assertEquals(fileName, Text.output());
+    assertEquals(fileName, Text.output(website));
 }
 
 }

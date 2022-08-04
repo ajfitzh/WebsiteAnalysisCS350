@@ -11,7 +11,7 @@ public class OutputPackager {
 		// so pass these into CLI output to output it to the scren.
 		CLI.output(
 			JSON.output(),
-			Text.output(),
+			Text.output(website),
 			Excel.output(website)
 		);
 

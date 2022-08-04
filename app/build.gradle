@@ -27,7 +27,7 @@ plugins {
 	
 	id "org.jbake.site" version "5.5.0"
 }
-
+/*
 reportStats {
 	reportsURL = 'https://project/reports/url/'
 	htmlSourceDir = file('src/main/html') // default value
@@ -35,7 +35,7 @@ reportStats {
 	buildID = "12345" // defaults to current date
 }
 
-import edu.odu.cs.zeil.report_accumulator.ReportStats     
+     
 
 
 task collectStats (type: ReportStats, dependsOn: ['build','reports']) {  
@@ -78,7 +78,7 @@ task buildHomePage (dependsOn: copyJbakeTemplates) {
 	    }
 	 }
 }
-
+*/
 jbake {
 	 srcDirName = "build/tmp/website"
 }
@@ -123,6 +123,9 @@ dependencies {
 	//For parsing HTML files
 	// jsoup HTML parser library @ https://jsoup.org/
 	implementation 'org.jsoup:jsoup:1.15.1'
+	
+	//try for report accumulator
+	//implementation 'edu.odu.cs.zeil.report_accumulator.ReportStats'
 
 }
 jar {
@@ -136,7 +139,7 @@ jar {
 
 run {
 	main = 'edu.odu.cs.cs350.App'
-	args = ['\\app\\src\\test\\resources\\BasicSite']
+	args = ['src/test/resources/BasicSite/']
 }
 
 
@@ -221,28 +224,29 @@ checkstyleTest {
 }
 
 ///Building the Reports Website
-task reports{
+//task reports{
 	//ensure test and javadoc files have been executed
-	test.ignoreFailures=true
+//	test.ignoreFailures=true
 	//check.dependsOn test and javadoc files 
 
-}
-task deployReports {
+//}
+
+//task deployReports {
 	//guarantee reports task has been run
-	check.dependsOn reports
+//	check.dependsOn reports
 	//copy the build/docs directory and contents to docs/ directory in gh-pages branch
-	task copyBuildDocs ( type: Copy) {
-		from 'build/docs'
-		into 'docs/' //how do add gh-pages branch?
-	}
+//	task copyBuildDocs ( type: Copy) {
+//		from 'build/docs'
+//		into 'docs/' //how do add gh-pages branch?
+//	}
 	//copy the build/reports directory and contents to reports/ directory in gh-pages branch
-		task copyBuildReports ( type: Copy) {
-		from 'build/reports'
-		into 'reports/' //how do add gh-pages branch?
-	}
-	
+//		task copyBuildReports ( type: Copy) {
+//		from 'build/reports'
+//		into 'reports/' //how do add gh-pages branch?
+//	}
+
 	//commit all the changes to gh-pages branch
-}
+//}
 
 ///Website Publication on github pages
 ////////  Website publication on GitHub pages ///////////////////
