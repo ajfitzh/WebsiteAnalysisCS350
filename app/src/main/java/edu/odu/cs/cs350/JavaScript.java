@@ -44,7 +44,7 @@ public class JavaScript {
 		this.classification = classification;
         this.fileSize = fileSize;
         this.uri =  uri;
-        System.out.println("-Other File created-");
+        System.out.println("-JavaScript File created-");
 
     }
 }
