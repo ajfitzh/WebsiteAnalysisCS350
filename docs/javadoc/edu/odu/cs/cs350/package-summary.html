@@ -82,31 +82,61 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="App.html" title="class in edu.odu.cs.cs350">App</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">App is the main class that gets everything done- reads the arguments, creates a website class, calls the analysis function, then calls the output function.</div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CLI.html" title="class in edu.odu.cs.cs350">CLI</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">For Command Line Interface Output, currently only used to output json, text, and excel file names</div>
+</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="CSS.html" title="class in edu.odu.cs.cs350">CSS</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">class for holding all data related to a CSS file for storing inside the Website class</div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Excel.html" title="class in edu.odu.cs.cs350">Excel</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Excel class for preparing and outputting Excel sheet displaying analysis information.</div>
+</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="Image.html" title="class in edu.odu.cs.cs350">Image</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Class to hold data for each individual image found in website analysis directory</div>
+</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="JavaScript.html" title="class in edu.odu.cs.cs350">JavaScript</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Class to hold information of each Javascript file found in analysis</div>
+</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="JSON.html" title="class in edu.odu.cs.cs350">JSON</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="OtherFile.html" title="class in edu.odu.cs.cs350">OtherFile</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab3"><a href="OtherFile.fileType.html" title="enum class in edu.odu.cs.cs350">OtherFile.fileType</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab3">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="OutputPackager.html" title="class in edu.odu.cs.cs350">OutputPackager</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Page.html" title="class in edu.odu.cs.cs350">Page</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Text.html" title="class in edu.odu.cs.cs350">Text</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Website.html" title="class in edu.odu.cs.cs350">Website</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">stores information of JSON files</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Link.html" title="class in edu.odu.cs.cs350">Link</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Class to store all internal, external, or intra-site links found by analysis</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="OtherFile.html" title="class in edu.odu.cs.cs350">OtherFile</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Class to hold relevant characteristics of each individual "Other" file, either Archive, Video, Audio, or Uncategorized files</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="OtherFile.fileType.html" title="enum class in edu.odu.cs.cs350">OtherFile.fileType</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab3">
+<div class="block">enumeration type for ARCHIVE, VIDEO, AUDIO, or UNCATEGORIZED files</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="OutputPackager.html" title="class in edu.odu.cs.cs350">OutputPackager</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">The purpose of OutputPackager is to call the JSON, Text, Excel, and CLI output functions and output .JAR file with completed code and 2 executables (Windows and Linux/OSX) Also possibly outputs errors to CLI if not caused by user (if caused by user, that output is handled by Website class</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Page.html" title="class in edu.odu.cs.cs350">Page</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Page class to hold all information and references of a single .html page in the website</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="Text.html" title="class in edu.odu.cs.cs350">Text</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">This class is called by OutputPackager and retrieves info from Website, Pages, and others in order to output a .txt file</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="Website.html" title="class in edu.odu.cs.cs350">Website</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Website class to perform analysis of entire directory and store information in separate collections</div>
+</div>
 </div>
 </div>
 </div>

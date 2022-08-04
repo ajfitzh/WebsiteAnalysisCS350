@@ -52,7 +52,9 @@ loadScripts(document, 'script');</script>
 <h2 class="title" id="I:A">A</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/App.html" class="type-name-link" title="class in edu.odu.cs.cs350">App</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">App is the main class that gets everything done- reads the arguments, creates a website class, calls the analysis function, then calls the output function.</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/App.html#%3Cinit%3E()" class="member-name-link">App()</a> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/App.html" title="class in edu.odu.cs.cs350">App</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/odu/cs/cs350/OtherFile.fileType.html#ARCHIVE" class="member-name-link">ARCHIVE</a> - Enum constant in enum class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/OtherFile.fileType.html" title="enum class in edu.odu.cs.cs350">OtherFile.fileType</a></dt>
@@ -62,101 +64,158 @@ loadScripts(document, 'script');</script>
 </dl>
 <h2 class="title" id="I:C">C</h2>
 <dl class="index">
-<dt><a href="edu/odu/cs/cs350/OutputPackager.html#callOutput()" class="member-name-link">callOutput()</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/OutputPackager.html" title="class in edu.odu.cs.cs350">OutputPackager</a></dt>
-<dd>&nbsp;</dd>
+<dt><a href="edu/odu/cs/cs350/OutputPackager.html#callOutput(edu.odu.cs.cs350.Website)" class="member-name-link">callOutput(Website)</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/OutputPackager.html" title="class in edu.odu.cs.cs350">OutputPackager</a></dt>
+<dd>
+<div class="block">callOutput calls the output process on JSON, Text, and Excel functions
+  * @param website website class that passes in current data of analysis just run</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/CLI.html" class="type-name-link" title="class in edu.odu.cs.cs350">CLI</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">For Command Line Interface Output, currently only used to output json, text, and excel file names</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/CLI.html#%3Cinit%3E()" class="member-name-link">CLI()</a> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/CLI.html" title="class in edu.odu.cs.cs350">CLI</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/odu/cs/cs350/CSS.html" class="type-name-link" title="class in edu.odu.cs.cs350">CSS</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">class for holding all data related to a CSS file for storing inside the Website class</div>
+</dd>
 </dl>
 <h2 class="title" id="I:E">E</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a> - package edu.odu.cs.cs350</dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/odu/cs/cs350/Excel.html" class="type-name-link" title="class in edu.odu.cs.cs350">Excel</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Excel class for preparing and outputting Excel sheet displaying analysis information.</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/Excel.html#%3Cinit%3E()" class="member-name-link">Excel()</a> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Excel.html" title="class in edu.odu.cs.cs350">Excel</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:G">G</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/Excel.html#getFileName()" class="member-name-link">getFileName()</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Excel.html" title="class in edu.odu.cs.cs350">Excel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Generate filename for .xlsx file</div>
+</dd>
+<dt><a href="edu/odu/cs/cs350/Text.html#getFileName()" class="member-name-link">getFileName()</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Text.html" title="class in edu.odu.cs.cs350">Text</a></dt>
+<dd>
+<div class="block">retrieves file name according to current date and appends to .txt file</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/App.html#getGreeting()" class="member-name-link">getGreeting()</a> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/App.html" title="class in edu.odu.cs.cs350">App</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Generates awesome greeting to user</div>
+</dd>
 </dl>
 <h2 class="title" id="I:H">H</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/Page.html#htmlExtractor(java.lang.String)" class="member-name-link">htmlExtractor(String)</a> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Page.html" title="class in edu.odu.cs.cs350">Page</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">HTML Extractor extracts anchor tags/links and classifies links as intra-page, intra-site, or external - Extracts Image tags and classifies as internal/external images - Extracts file size for each image, the URI for each image, and local pages on which it is referenced</div>
+</dd>
 </dl>
 <h2 class="title" id="I:I">I</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/Image.html" class="type-name-link" title="class in edu.odu.cs.cs350">Image</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Class to hold data for each individual image found in website analysis directory</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/App.html#isValidPath(java.lang.String)" class="member-name-link">isValidPath(String)</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/App.html" title="class in edu.odu.cs.cs350">App</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">checks if it is a valid file path</div>
+</dd>
 </dl>
 <h2 class="title" id="I:J">J</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/JavaScript.html" class="type-name-link" title="class in edu.odu.cs.cs350">JavaScript</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Class to hold information of each Javascript file found in analysis</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/JSON.html" class="type-name-link" title="class in edu.odu.cs.cs350">JSON</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">stores information of JSON files</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/JSON.html#%3Cinit%3E()" class="member-name-link">JSON()</a> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/JSON.html" title="class in edu.odu.cs.cs350">JSON</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
 <dl class="index">
+<dt><a href="edu/odu/cs/cs350/Link.html" class="type-name-link" title="class in edu.odu.cs.cs350">Link</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
+<dd>
+<div class="block">Class to store all internal, external, or intra-site links found by analysis</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/Website.html#listAllNodes()" class="member-name-link">listAllNodes()</a> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Function to print all nodes to the console for testing purposes</div>
+</dd>
 </dl>
 <h2 class="title" id="I:M">M</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/App.html#main(java.lang.String%5B%5D)" class="member-name-link">main(String[])</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/App.html" title="class in edu.odu.cs.cs350">App</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">main is the function that takes in the argument and calls the important analyze, output functions</div>
+</dd>
 </dl>
 <h2 class="title" id="I:O">O</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/OtherFile.html" class="type-name-link" title="class in edu.odu.cs.cs350">OtherFile</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Class to hold relevant characteristics of each individual "Other" file, either Archive, Video, Audio, or Uncategorized files</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/OtherFile.fileType.html" class="type-name-link" title="enum class in edu.odu.cs.cs350">OtherFile.fileType</a> - Enum Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="edu/odu/cs/cs350/Excel.html#output()" class="member-name-link">output()</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Excel.html" title="class in edu.odu.cs.cs350">Excel</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">enumeration type for ARCHIVE, VIDEO, AUDIO, or UNCATEGORIZED files</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/JSON.html#output()" class="member-name-link">output()</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/JSON.html" title="class in edu.odu.cs.cs350">JSON</a></dt>
-<dd>&nbsp;</dd>
-<dt><a href="edu/odu/cs/cs350/Text.html#output()" class="member-name-link">output()</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Text.html" title="class in edu.odu.cs.cs350">Text</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">finds json files and returns date and time of file</div>
+</dd>
+<dt><a href="edu/odu/cs/cs350/Excel.html#output(edu.odu.cs.cs350.Website)" class="member-name-link">output(Website)</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Excel.html" title="class in edu.odu.cs.cs350">Excel</a></dt>
+<dd>
+<div class="block">output function for .xlsx file</div>
+</dd>
+<dt><a href="edu/odu/cs/cs350/Text.html#output(edu.odu.cs.cs350.Website)" class="member-name-link">output(Website)</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Text.html" title="class in edu.odu.cs.cs350">Text</a></dt>
+<dd>
+<div class="block">output function for .txt file</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/CLI.html#output(java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">output(String, String, String)</a> - Static method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/CLI.html" title="class in edu.odu.cs.cs350">CLI</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/odu/cs/cs350/OutputPackager.html" class="type-name-link" title="class in edu.odu.cs.cs350">OutputPackager</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The purpose of OutputPackager is to call the JSON, Text, Excel, and CLI output functions and output .JAR file with completed code and 2 executables (Windows and Linux/OSX) Also possibly outputs errors to CLI if not caused by user (if caused by user, that output is handled by Website class</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/OutputPackager.html#%3Cinit%3E()" class="member-name-link">OutputPackager()</a> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/OutputPackager.html" title="class in edu.odu.cs.cs350">OutputPackager</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:P">P</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/Page.html" class="type-name-link" title="class in edu.odu.cs.cs350">Page</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Page class to hold all information and references of a single .html page in the website</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/Website.html#prepareDirectory(java.lang.String%5B%5D)" class="member-name-link">prepareDirectory(String[])</a> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The "starter" function that reads the user argument, input, and reports user errors and requests new entry</div>
+</dd>
 </dl>
 <h2 class="title" id="I:S">S</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/Website.html#sort(java.lang.String,java.io.File,java.util.Collection,java.util.Collection,java.util.Collection,java.util.Collection,long)" class="member-name-link">sort(String, File, Collection&lt;Page&gt;, Collection&lt;Image&gt;, Collection&lt;CSS&gt;, Collection&lt;OtherFile&gt;, long)</a> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Sorting function for analyzed files</div>
+</dd>
 </dl>
 <h2 class="title" id="I:T">T</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/Text.html" class="type-name-link" title="class in edu.odu.cs.cs350">Text</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">This class is called by OutputPackager and retrieves info from Website, Pages, and others in order to output a .txt file</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/Text.html#%3Cinit%3E()" class="member-name-link">Text()</a> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Text.html" title="class in edu.odu.cs.cs350">Text</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="edu/odu/cs/cs350/Website.html#Translator()" class="member-name-link">Translator()</a> - Method in class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">In-Progress: Translator Strips URLS, examines duplicates, stops at website boundaries-- Examines HTML, discards default pages like Error 404</div>
+</dd>
 </dl>
 <h2 class="title" id="I:U">U</h2>
 <dl class="index">
@@ -180,7 +239,9 @@ the order they are declared.</div>
 <h2 class="title" id="I:W">W</h2>
 <dl class="index">
 <dt><a href="edu/odu/cs/cs350/Website.html" class="type-name-link" title="class in edu.odu.cs.cs350">Website</a> - Class in <a href="edu/odu/cs/cs350/package-summary.html">edu.odu.cs.cs350</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Website class to perform analysis of entire directory and store information in separate collections</div>
+</dd>
 <dt><a href="edu/odu/cs/cs350/Website.html#%3Cinit%3E()" class="member-name-link">Website()</a> - Constructor for class edu.odu.cs.cs350.<a href="edu/odu/cs/cs350/Website.html" title="class in edu.odu.cs.cs350">Website</a></dt>
 <dd>&nbsp;</dd>
 </dl>

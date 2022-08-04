@@ -95,6 +95,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">OutputPackager</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">The purpose of OutputPackager is to call the JSON, Text, Excel, and CLI output functions and output .JAR file with completed code and 2 executables (Windows and Linux/OSX) Also possibly outputs errors to CLI if not caused by user (if caused by user, that output is handled by Website class</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,8 +124,11 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#callOutput()" class="member-name-link">callOutput</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#callOutput(edu.odu.cs.cs350.Website)" class="member-name-link">callOutput</a><wbr>(<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;website)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">callOutput calls the output process on JSON, Text, and Excel functions
+  * @param website website class that passes in current data of analysis just run</div>
+</div>
 </div>
 </div>
 </div>
@@ -157,9 +161,11 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="callOutput()">
+<section class="detail" id="callOutput(edu.odu.cs.cs350.Website)">
 <h3>callOutput</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">callOutput</span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">callOutput</span><wbr><span class="parameters">(<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;website)</span></div>
+<div class="block">callOutput calls the output process on JSON, Text, and Excel functions
+  * @param website website class that passes in current data of analysis just run</div>
 </section>
 </li>
 </ul>

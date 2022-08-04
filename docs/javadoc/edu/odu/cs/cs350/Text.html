@@ -95,6 +95,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Text</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">This class is called by OutputPackager and retrieves info from Website, Pages, and others in order to output a .txt file</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -123,8 +124,15 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#output()" class="member-name-link">output</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getFileName()" class="member-name-link">getFileName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">retrieves file name according to current date and appends to .txt file</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#output(edu.odu.cs.cs350.Website)" class="member-name-link">output</a><wbr>(<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;website)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">output function for .txt file</div>
+</div>
 </div>
 </div>
 </div>
@@ -157,9 +165,27 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="output()">
+<section class="detail" id="output(edu.odu.cs.cs350.Website)">
 <h3>output</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">output</span>()</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">output</span><wbr><span class="parameters">(<a href="Website.html" title="class in edu.odu.cs.cs350">Website</a>&nbsp;website)</span></div>
+<div class="block">output function for .txt file</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>website</code> - Website class to pass in analysis results to output functions</dd>
+<dt>Returns:</dt>
+<dd>returns string fileName</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getFileName()">
+<h3>getFileName</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getFileName</span>()</div>
+<div class="block">retrieves file name according to current date and appends to .txt file</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>returns filename string</dd>
+</dl>
 </section>
 </li>
 </ul>

@@ -95,6 +95,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Website</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Website class to perform analysis of entire directory and store information in separate collections</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -124,10 +125,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#listAllNodes()" class="member-name-link">listAllNodes</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Function to print all nodes to the console for testing purposes</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#prepareDirectory(java.lang.String%5B%5D)" class="member-name-link">prepareDirectory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;args)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The "starter" function that reads the user argument, input, and reports user errors and requests new entry</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sort(java.lang.String,java.io.File,java.util.Collection,java.util.Collection,java.util.Collection,java.util.Collection,long)" class="member-name-link">sort</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;file,
  <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/io/File.html" title="class or interface in java.io" class="external-link">File</a>&nbsp;fileobject,
@@ -136,10 +141,14 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="CSS.html" title="class in edu.odu.cs.cs350">CSS</a>&gt;&nbsp;csssheets,
  <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="OtherFile.html" title="class in edu.odu.cs.cs350">OtherFile</a>&gt;&nbsp;otherFiles,
  long&nbsp;tempFileSize)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sorting function for analyzed files</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#Translator()" class="member-name-link">Translator</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">In-Progress: Translator Strips URLS, examines duplicates, stops at website boundaries-- Examines HTML, discards default pages like Error 404</div>
+</div>
 </div>
 </div>
 </div>
@@ -175,6 +184,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="prepareDirectory(java.lang.String[])">
 <h3>prepareDirectory</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">prepareDirectory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>[]&nbsp;args)</span></div>
+<div class="block">The "starter" function that reads the user argument, input, and reports user errors and requests new entry</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>args</code> - </dd>
+</dl>
 </section>
 </li>
 <li>
@@ -187,18 +201,31 @@ loadScripts(document, 'script');</script>
  <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="CSS.html" title="class in edu.odu.cs.cs350">CSS</a>&gt;&nbsp;csssheets,
  <a href="https://docs.oracle.com/en/java/javase/18/docs/api/java.base/java/util/Collection.html" title="class or interface in java.util" class="external-link">Collection</a>&lt;<a href="OtherFile.html" title="class in edu.odu.cs.cs350">OtherFile</a>&gt;&nbsp;otherFiles,
  long&nbsp;tempFileSize)</span></div>
+<div class="block">Sorting function for analyzed files</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>file</code> - filename</dd>
+<dd><code>fileobject</code> - File Object for analysis plugins</dd>
+<dd><code>pages</code> - collection of pages to print / add to</dd>
+<dd><code>images</code> - collection of images to print / add to</dd>
+<dd><code>csssheets</code> - collection of csssheets to print / add to</dd>
+<dd><code>otherFiles</code> - collection of otherFiles to print / add to</dd>
+<dd><code>tempFileSize</code> - fileSize to pass through</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="Translator()">
 <h3>Translator</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">Translator</span>()</div>
+<div class="block">In-Progress: Translator Strips URLS, examines duplicates, stops at website boundaries-- Examines HTML, discards default pages like Error 404</div>
 </section>
 </li>
 <li>
 <section class="detail" id="listAllNodes()">
 <h3>listAllNodes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">listAllNodes</span>()</div>
+<div class="block">Function to print all nodes to the console for testing purposes</div>
 </section>
 </li>
 </ul>
