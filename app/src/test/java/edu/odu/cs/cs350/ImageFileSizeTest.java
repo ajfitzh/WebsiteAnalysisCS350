@@ -1,8 +1,13 @@
 package edu.odu.cs.cs350;
 
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
 
 import java.io.File;
 
@@ -26,7 +31,7 @@ public class ImageFileSizeTest {
         		//System.out.println("Grump found- does it include the correct fileSize?");
         		//System.out.println("size: " + image.fileSize);
         		imageSize = image.fileSize;
-        		assertEquals("image grump.jpg should equal 141067 kb", 1410647, imageSize);
+        		assertEquals(1410647, imageSize, "image grump.jpg should equal 141067 kb");
         	}
         }
      

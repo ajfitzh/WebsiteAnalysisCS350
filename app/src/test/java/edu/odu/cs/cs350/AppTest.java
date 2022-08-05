@@ -3,8 +3,12 @@
  */
 package edu.odu.cs.cs350;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+import org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
 
 public class AppTest {
 	
@@ -13,16 +17,16 @@ public class AppTest {
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
     @Test public void appRefusesInvalidDirectoryPath() {
-    	assertEquals("app should return error if invalid directory path", 0, App.checkIfDirectoryEmptyOrInvalid("C:/underoath"));
+    	assertEquals(0, App.checkIfDirectoryEmptyOrInvalid("C:/underoath"), "app should return error if empty folder or invalid");
     }
     @Test public void appRefusesEmptyDirectory() {
-    	assertEquals("app should return error if empty folder", 0, App.checkIfDirectoryEmptyOrInvalid("/app/src/test/resources/BasicSite/emptyDirectory"));
+    	assertEquals(0, App.checkIfDirectoryEmptyOrInvalid("/app/src/test/resources/BasicSite/emptyDirectory"), "app should return error if empty folder");
     }
     @Test public void appRefusesFile() {
-    	assertEquals("app should return error if just a file", 0, App.checkIfDirectoryEmptyOrInvalid("/app/src/test/resources/BasicSite/aboutme.html"));
+    	assertEquals(0, App.checkIfDirectoryEmptyOrInvalid("/app/src/test/resources/BasicSite/aboutme.html"), "app should return error if just a file");
     }
     @Test public void appRefusesNoArgument() {
     	String[] args = new String[0];
-    	assertEquals("app should return error if just a file", 0, App.isArgumentProvided(args));
+    	assertEquals(0, App.isArgumentProvided(args), "app should return error if just a file");
     }
 }

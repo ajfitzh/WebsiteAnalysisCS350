@@ -1,45 +1,92 @@
 package edu.odu.cs.cs350;
 
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.File;
+import java.io.FileFilter;
 import java.io.IOException;
-
-import java.sql.Time;
-import java.time.LocalDate;
-import java.time.OffsetDateTime;
-import java.time.ZoneOffset;
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import java.nio.file.Files;
+import java.io.IOException;
+import java.io.FileWriter;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+import java.io.BufferedWriter;
 
 
+
+/** This class is called by OutputPackager and retrieves info from Website, Pages, and others in order to output a .txt file
+ * @author austi
+ *
+ */
 public class Text {
-	//This class is called by OutputPackager and retrieves info from Website, Pages, and others
-	// in order to output a .txt file
+	//
+	
 	
 	//NEEDS: list of all local pages (printed one line per page, sorted lexicographically)
 	//NEEDS: local path of page and file size of page
 	//NEEDS or CREATES: total size of all pages added together
 	//string for filename, must have format YYYMMDD-hhmmss-summary.xlsx
-		String filename;
 
-	//output function for .txt file
-	public static String output() {
+	/** output function for .txt file
+	 * @param website Website class to pass in analysis results to output functions 
+	 * @return returns string fileName
+	 */
+	public static String output(Website website) {
 		//string for filename, must have format YYYMMDD-hhmmss-summary.txt
-		String fileName = null;
-		try {
-		    // displaying date
-		    Format f = new SimpleDateFormat("MMddyyyy-hhmmss");
-		    String date = f.format(new Date());
-		    fileName = date+"-summary.txt";
-		    BufferedWriter writer = new BufferedWriter(new FileWriter(date + "-summary.txt"));
-				writer.write("Writing text to my file");
-				writer.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-		}
+		
+		String fileName = getFileName();
+		for (Page page: website.pages)	
+		 {	
+			
+				
+					try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName,true))) {
+						
+						while (page.name != null) {
+						for(Image image: website.images)
+						{
+							
+							{
+							File f = new File(image.uri);
+							writer.write(page.name + " " + page.images.size());
+							writer.newLine();
+							writer.flush();
+						
+							}
+						
+						
+							writer.close();
+						}	
+
+						
+						
+						
+					
+												
+					}		
+						} catch (IOException e) {
+							e.printStackTrace();
+						}
+						
+					
+						
+				}
 
 		return fileName;
+			}
+			 
+
+
+
+		
+	
+	/** retrieves file name according to current date and appends to .txt file
+	 * @return returns filename string 
+	 */
+	public static String getFileName(){
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMddyyyy-hhmmss");
+		LocalDateTime now = LocalDateTime.now();
+	    return dtf.format(now) + "-summary.txt";
 	}
-}
+
+}	
+
+
+

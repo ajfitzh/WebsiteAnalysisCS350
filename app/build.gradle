@@ -6,20 +6,106 @@
  * User Manual available at https://docs.gradle.org/7.4.2/userguide/building_java_projects.html
  */
 
+
 plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
+    id 'java'
     id 'application'
+    
+	id 'jacoco'
+	id "org.barfuin.gradle.jacocolog" version '2.0.0'
+	
+	id 'pmd'
+	id "com.github.spotbugs" version "5.0.9"
+	id 'edu.odu.cs.report_accumulator' version '1.4'
+
+	id 'checkstyle'
+
+	id 'project-report'
+	//connect to git functionality
+	id "org.xbib.gradle.plugin.git" version "2.0.0"
+	
+	id "org.jbake.site" version "5.5.0"
+}
+/*
+reportStats {
+	reportsURL = 'https://project/reports/url/'
+	htmlSourceDir = file('src/main/html') // default value
+	reportsDir = file('build/reports') //default value
+	buildID = "12345" // defaults to current date
 }
 
+     
+
+
+task collectStats (type: ReportStats, dependsOn: ['build','reports']) {  
+    description "Collect statistics from various reports & analysis tools"
+    reportsURL = 'https://www.cs.odu.edu/~zeil/gitlab/' + project.name + '/reports'
+}
+
+task site (dependsOn: ['copyBake', 'copyJDocs', 'collectStats']){ 
+    description "Build the project website (in build/reports)"
+    group "reporting"
+}
+test.ignoreFailures=true
+check.dependsOn htmlDependencyReport
+
+
+task copyJDocs (type: Copy) {
+    from 'build/docs'
+    into 'build/tmp/website/assets'
+    dependsOn 'javadoc'
+}
+
+task copyReports (type: Copy) {
+    from 'build/reports'
+    into 'build/tmp/website/assets'
+    dependsOn 'reports'
+}
+
+task copyJbakeTemplates (type: Copy) {
+    from 'src/jbake'
+    into 'build/tmp/website'
+}
+
+task buildHomePage (dependsOn: copyJbakeTemplates) {
+	 inputs.files ( 'build/tmp/website/content/home0.md', '../README.md')
+	 outputs.file ( 'build/tmp/website/content/home.md' )
+	 doLast  {
+	     outputs.files.singleFile.withOutputStream { out ->
+	         for ( file in inputs.files ) file.withInputStream {
+		 	     out << it << '\n' }
+	    }
+	 }
+}
+*/
+jbake {
+	 srcDirName = "build/tmp/website"
+}
+
+task setupWebsite (dependsOn: ['buildHomePage', 'copyReports', 'copyJDocs']){
+}
+
+bake.dependsOn "setupWebsite"
+
+java {
+	//sourceCompatibility = JavaVersion.toVersion(11)
+	//targetCompatibility = JavaVersion.toVersion(11)
+}
 repositories {
     // Use Maven Central for resolving dependencies.
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
+	///Test Implementation deals with everything in src/test (test code)
     // Use JUnit test framework.
-    testImplementation 'junit:junit:4.13.2'
-
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'org.hamcrest:hamcrest-library:2.2'
+    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.5.2")
+    
+	////Implementation applies to everything in src main (production code)
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:30.1.1-jre'
     
@@ -36,10 +122,131 @@ dependencies {
 	
 	//For parsing HTML files
 	// jsoup HTML parser library @ https://jsoup.org/
-implementation 'org.jsoup:jsoup:1.15.1'
+	implementation 'org.jsoup:jsoup:1.15.1'
+	
+	//try for report accumulator
+	//implementation 'edu.odu.cs.zeil.report_accumulator.ReportStats'
+
 }
+jar {
+	archiveBaseName = "WebsiteAnalysisGroup5"
+	manifest {
+		attributes (
+			"Main-Class": "edu.odu.cs.cs350.App"
+		)
+	}
+}
+
+run {
+	main = 'edu.odu.cs.cs350.App'
+	args = ['src/test/resources/BasicSite/']
+}
+
+
+test {
+
+	useJUnitPlatform()
+
+	reports {
+		html.required = true
+	}
+
+	ignoreFailures = true
+	
+	testLogging {
+		events "passed", "skipped", "failed", "standardOut", "standardError"
+	}
+	//finalizedBy jacocoTestReport
+}
+
 
 application {
     // Define the main class for the application.
     mainClass = 'edu.odu.cs.cs350.App'
 }
+
+///-------------------------------
+/// Documentation Tool(s)
+///-------------------------------
+javadoc {
+	failOnError false 
+}
+
+build.dependsOn javadoc
+///-------------------------------
+/// Documentation Tool(s)
+///-------------------------------
+
+pmd {
+	toolVersion = '6.21.0'
+	ignoreFailures = true
+	ruleSets = [
+		"category/java/bestpractices.xml",
+		"category/java/codestyle.xml",
+		"category/java/design.xml",
+		"category/java/errorprone.xml",
+		"category/java/performance.xml"
+	]
+}
+
+pmdTest {
+	enabled = false
+}
+
+spotbugsMain {
+	ignoreFailures = true
+	effort = "max"
+	reportLevel = "medium"
+	reports {
+		xml.enabled = true
+		html.enabled = true
+	}
+}
+
+spotbugsTest {
+	enabled = false
+}
+
+
+checkstyle {
+    toolVersion "8.42"
+    ignoreFailures = true
+    showViolations = false
+}
+tasks.withType(Checkstyle) {
+    reports {
+        html.destination project.file("build/reports/checkstyle/main.html")
+    }
+}
+
+checkstyleTest {
+    enabled = false
+}
+
+///Building the Reports Website
+//task reports{
+	//ensure test and javadoc files have been executed
+//	test.ignoreFailures=true
+	//check.dependsOn test and javadoc files 
+
+//}
+
+//task deployReports {
+	//guarantee reports task has been run
+//	check.dependsOn reports
+	//copy the build/docs directory and contents to docs/ directory in gh-pages branch
+//	task copyBuildDocs ( type: Copy) {
+//		from 'build/docs'
+//		into 'docs/' //how do add gh-pages branch?
+//	}
+	//copy the build/reports directory and contents to reports/ directory in gh-pages branch
+//		task copyBuildReports ( type: Copy) {
+//		from 'build/reports'
+//		into 'reports/' //how do add gh-pages branch?
+//	}
+
+	//commit all the changes to gh-pages branch
+//}
+
+///Website Publication on github pages
+////////  Website publication on GitHub pages ///////////////////

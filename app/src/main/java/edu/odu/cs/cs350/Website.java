@@ -15,41 +15,98 @@ import org.jsoup.select.Elements;
 
 
 
+/** Website class to perform analysis of entire directory and store information in separate collections
+ * @author austi
+ *
+ */
 public class Website {
-	//placeholders to temporarily count files
+	/** placeholder html int to temporarily count files
+	 * 
+	 */
 	int htmlCounter = 1;
+	/** placeholder css int to temporarily count files
+	 * 
+	 */
 	int cssCounter = 1;
+	/** placeholder js int to temporarily count files
+	 * 
+	 */
 	int jsCounter = 1;
+	/** placeholder image int to temporarily count files
+	 * 
+	 */
 	int imageryCounter = 1;
+	/** placeholder archive int to temporarily count files
+	 * 
+	 */
 	int archivesCounter = 1;
+	/** placeholder audio int to temporarily count files
+	 * 
+	 */
 	int audioCounter = 1;
+	/** placeholder video int to temporarily count files
+	 * 
+	 */
 	int videosCounter = 1;
+	/** placeholder uncategorized int to temporarily count files
+	 * 
+	 */
 	int uncategorizedCounter = 1;
 	
-	//ArrayList for storing items (Pages and other items) created by HTMLExtractor/Translator
-	Collection<Page> pages = new ArrayList<Page>();
-	Collection<Image> images = new ArrayList<Image>();
-	Collection<CSS> csssheets = new ArrayList<CSS>();
-	Collection<OtherFile> otherFiles = new ArrayList<OtherFile>();
-	Collection<JavaScript> javascripts = new ArrayList<JavaScript>();
 	
-	// totalSize might store size in MB, might take this out
+	/** ArrayList for storing items (Pages and other items) created by HTMLExtractor/Translator
+	 * 
+	 */
+	Collection<Page> pages = new ArrayList<Page>();
+	/** collection of images
+	 * 
+	 */
+	Collection<Image> images = new ArrayList<Image>();
+	/** collection of CSS sheets
+	 * 
+	 */
+	Collection<CSS> csssheets = new ArrayList<CSS>();
+	/** collection of otherFiles
+	 * 
+	 */
+	Collection<OtherFile> otherFiles = new ArrayList<OtherFile>();
+	/** collection of javascript
+	 * 
+	 */
+	Collection<JavaScript> javascripts = new ArrayList<JavaScript>();
+
+	/** totalSize might store size in MB, might take this out
+	 * 
+	 */
 	int totalSize;
 	
-	//name of the website
+	/** name of the website
+	 * 
+	 */
 	String name;
 	
-	//collection of pathnames called "BaseURLs"
+	/**  collection of pathnames called "BaseURLs"
+	 * 
+	 */
 	Collection<String> baseURLs;
 
-	//The "starter" function that reads the user argument, input, and reports user errors and requests new entry
+	/** The "starter" function that reads the user argument, input, and reports user errors and requests new entry
+	 * @param args
+	 */
 	public void prepareDirectory(String[] args) {
 		
-		System.out.println("Preparing Directory:"+args[0]);
+		//System.out.println("Preparing Directory:"+args[0]);
 		
 		new Website().listFolder(new File(args[0]), pages, images, csssheets, otherFiles);
 	}
 	
+/** function to print all files
+ * @param dir directory to analyze in File format
+ * @param pages collection of pages to print / add to
+ * @param images  collection of images to print / add to
+ * @param csssheets collection of csssheets to print / add to
+ * @param otherFiles collection of otherFiles to print / add to
+ */
 private void listFile(File dir, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles) {
 	File[] files = dir.listFiles();
 	if(files != null) {
@@ -71,7 +128,16 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 	}
 	}
 }
-	//Sorting function for analyzed files
+
+	/** Sorting function for analyzed files
+	 * @param file filename
+	 * @param fileobject File Object for analysis plugins
+ * @param pages collection of pages to print / add to
+ * @param images  collection of images to print / add to
+ * @param csssheets collection of csssheets to print / add to
+ * @param otherFiles collection of otherFiles to print / add to
+	 * @param tempFileSize fileSize to pass through
+	 */
 	public void sort(String file, File fileobject, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles, long tempFileSize) {
 		String name = fileobject.getName();
 		switch(file) {
@@ -79,7 +145,8 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 				System.out.println("HTML file found and added");
 				
 				System.out.println(name);
-				pages.add(new Page(name, htmlCounter,tempFileSize,"hi"));
+				
+				pages.add(new Page(name, htmlCounter,tempFileSize,fileobject.getPath()));
 				htmlCounter++;
 				break;
 		case "text/css":
@@ -105,77 +172,45 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 				break;
 		case "application/x-zip-compressed":
 				System.out.println("Zip(Archive) file file found and added");
-				otherFiles.add(new OtherFile(name, archivesCounter, "Zip", tempFileSize, "testPath"));
+				otherFiles.add(new OtherFile(name, archivesCounter, "Zip", tempFileSize, fileobject.getPath()));
 				archivesCounter++;
 				break;
 		case "video/quicktime":
 		case "video/mp4":
 				System.out.println("Video(.mov/.mp4) file found and added");
-				otherFiles.add(new OtherFile(name, archivesCounter, "mov", tempFileSize, "testPath"));
+				otherFiles.add(new OtherFile(name, archivesCounter, "mov", tempFileSize, fileobject.getPath()));
 				videosCounter++;
 				break;
 		case "application/pdf":
 				System.out.println("PDF file set as Uncategorized file found and added");
-				otherFiles.add(new OtherFile(name, archivesCounter, "PDF", tempFileSize, "testPath"));
+				otherFiles.add(new OtherFile(name, archivesCounter, "PDF", tempFileSize, fileobject.getPath()));
 				uncategorizedCounter++;
 				break;
 		case "audio/mpeg":
 				System.out.println("Audio file found and added");
-				otherFiles.add(new OtherFile(name, archivesCounter, "Audio", tempFileSize, "testPath"));
+				System.out.println("file path: " + fileobject.getPath());
+				otherFiles.add(new OtherFile(name, archivesCounter, "Audio", tempFileSize, fileobject.getPath()));
 				audioCounter++;
 				break;
 	}
 	
 	}
-	//Translator Strips URLS, examines duplicates, stops at website boundaries
-	// Examines HTML, discards default pages like Error 404
+	
+	/** In-Progress: Translator Strips URLS, examines duplicates, stops at website boundaries-- Examines HTML, discards default pages like Error 404
+	 * 
+	 */
 	public void Translator() {}
 	
-	//HTML Extractor extracts anchor tags/links and classifies links as intra-page, intra-site, or external
-	//Extracts Image tags and classifies as internal/external images
-	//Extracts file size for each image, the URI for each image, and local pages on which it is referenced
-	public void htmlExtractor(String htmlfile) {
-		int intrapageLinks = 0;
-		int intersiteLinks = 0;
-		int externalLinks = 0;
-		System.out.println("----Start JSoup Analysis---");
-		//IF it's an HTML file, use JSoup to decipher HTML objects in it
-		File input = new File(htmlfile);
-		try {
-			Document doc = Jsoup.parse(input, "UTF-8", "");
-			
-			System.out.println("--Links--");
-			Elements links = doc.select("a[href]");
-			for(Element link : links) {
-				System.out.println(link.attr("href"));
-				if(link.attr("href").contains("#")) { intrapageLinks++; }
-				else if(link.attr("href").contains("http")) { externalLinks++; }
-				else { intersiteLinks++; }
-			}
-			
-			System.out.println("--Image References--");
-			Elements imagereferences = doc.select("img[src~=(?i)\\.(svg|png|jpe?g|gif)]");
-			for(Element image : imagereferences) {
-				System.out.println(image.attr("src"));
-			}
-			
-			System.out.println("--CSS/JS External References--");
-			Elements cssreferences = doc.select("link");
-			for(Element cssreference : cssreferences) {
-				System.out.println(cssreference.attr("href"));
-				System.out.println(cssreference.attr("src"));
-			}
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		System.out.println("Intra-page Links: " + intrapageLinks );
-		System.out.println("Inter-site Links: " + intersiteLinks );
-		System.out.println("External Links  : " + externalLinks );
-			System.out.println("--End of JSoup Analysis--");
-	}
 	
-	//listFolder function
+	
+	//
+	/** listFolder function lists all subfolders within directory and aids in cataloguing it
+	 * @param dir directory file to be analyzed
+ * @param pages collection of pages to print / add to
+ * @param images  collection of images to print / add to
+ * @param csssheets collection of csssheets to print / add to
+ * @param otherFiles collection of otherFiles to print / add to
+	 */
 	void listFolder(File dir, Collection<Page> pages, Collection<Image> images, Collection<CSS> csssheets, Collection<OtherFile> otherFiles) {
 		File[] subDirs = dir.listFiles(new FileFilter() {
 			
@@ -199,9 +234,14 @@ private void listFile(File dir, Collection<Page> pages, Collection<Image> images
 	}
 	
 	
-	//Create output packager to allow Website to call the Output function
+	/** Create output packager to allow Website to call the Output function
+	 * 
+	 */
 	OutputPackager Output = new OutputPackager();
 
+	/** Function to print all nodes to the console for testing purposes 
+	 * 
+	 */
 	public void listAllNodes() {
 
 		System.out.println("---------Pages in Site");

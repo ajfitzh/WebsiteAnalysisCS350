@@ -1,8 +1,10 @@
 package edu.odu.cs.cs350;
 
 import java.util.Collection;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.io.File;
 
 public class JavaScriptTest{
