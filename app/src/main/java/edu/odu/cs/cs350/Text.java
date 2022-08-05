@@ -1,6 +1,9 @@
 package edu.odu.cs.cs350;
 
-
+import java.io.File;
+import java.io.FileFilter;
+import java.io.IOException;
+import java.nio.file.Files;
 import java.io.IOException;
 import java.io.FileWriter;
 import java.time.format.DateTimeFormatter;
@@ -39,10 +42,13 @@ public class Text {
 						while (page.name != null) {
 						for(Image image: website.images)
 						{
+							
 							{
-							writer.write(page.name + " " + image.fileSize);
+							File f = new File(image.uri);
+							writer.write(page.name + " " + page.images.size());
 							writer.newLine();
 							writer.flush();
+						
 							}
 						
 						
